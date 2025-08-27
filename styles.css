@@ -519,13 +519,13 @@ nav {
 /* ==== Responsive ==== */
 @media (max-width: 768px) {
   .testimonial-text {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
   .testimonial-slide {
     padding: 30px 20px;
   }
   .carousel-arrow {
-    font-size: 1.5rem;
+    font-size: 0.7rem;
   }
 }
 
