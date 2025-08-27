@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estudio Jurídico</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+<header id="navbar">
+  <nav class="container">
+    <h1 class="logo">Estudio Legal</h1>
+
+    <!-- Botón hamburguesa -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Menú de navegación -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Secciones -->
+ <section id="inicio" class="hero reveal">
+  <div class="hero-content">
+    <h2 class="hero-title">Defendemos tus derechos con experiencia y compromiso</h2>
+    <p class="hero-subtitle">Más de 20 años brindando asesoría legal integral en Lima y todo el Perú.</p>
+    <a href="#contacto" class="btn-cta">Agendar Consulta</a>
+  </div>
+  <!-- Indicador scroll -->
+  <div class="scroll-indicator">
+    <span></span>
+  </div>
+</section>
+
+<!-- SOBRE NOSOTROS -->
+<section id="nosotros" class="section container reveal">
+  <div class="nosotros-content">
+    <div class="nosotros-texto">
+      <h2>Sobre Nosotros</h2>
+      <p>
+        Nuestro estudio jurídico se especializa en derecho civil, penal y corporativo.  
+        Contamos con un equipo altamente calificado que trabaja con ética, compromiso y eficiencia para brindar soluciones legales estratégicas.
+      </p>
+    </div>
+    <div class="nosotros-img">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216" alt="Equipo de abogados">
+    </div>
+  </div>
+</section>
+
+
+
+ <section id="servicios" class="section container reveal">
+  <h2 class="section-title">Nuestros Servicios</h2>
+  <div class="servicios-grid">
+    
+    <!-- Servicio 1 -->
+    <div class="servicio-card reveal">
+      <div class="servicio-bg" style="background-image: url('https://images.unsplash.com/photo-1528747045269-390fe33c19d4?auto=format&fit=crop&w=1200&q=80');"></div>
+      <div class="servicio-content">
+        <h3>Asesoría Corporativa</h3>
+        <p>Soluciones legales estratégicas para empresas en cada etapa: constitución, fusiones, contratos y operaciones internacionales.</p>
+        <a href="#contacto" class="cta-btn">Solicitar Asesoría</a>
+      </div>
+    </div>
+
+    <!-- Servicio 2 -->
+    <div class="servicio-card reveal">
+      <div class="servicio-bg" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80');"></div>
+      <div class="servicio-content">
+        <h3>Defensa Penal</h3>
+        <p>Defendemos tus derechos con ética, solidez jurídica y estrategias efectivas en todo tipo de procesos judiciales.</p>
+        <a href="#contacto" class="cta-btn">Solicitar Defensa</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="testimonios" class="section container reveal">
+  <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+  
+  <div class="testimonial-carousel">
+    <div class="testimonial-slide active">
+      <blockquote class="testimonial-text">
+        “El equipo legal me brindó confianza y seguridad en todo momento. Su asesoría fue fundamental para resolver mi caso con éxito.”
+      </blockquote>
+      <p class="testimonial-author">— Carlos Gutiérrez, Empresario</p>
+      <span class="carousel-arrow left">&#10094;</span>
+      <span class="carousel-arrow right">&#10095;</span>
+    </div>
+
+    <div class="testimonial-slide">
+      <blockquote class="testimonial-text">
+        “Recibí un acompañamiento constante y profesional. No solo resolvieron el problema legal, también me explicaron cada paso con claridad.”
+      </blockquote>
+      <p class="testimonial-author">— Mariana Torres, Ejecutiva</p>
+      <span class="carousel-arrow left">&#10094;</span>
+      <span class="carousel-arrow right">&#10095;</span>
+    </div>
+
+    <div class="testimonial-slide">
+      <blockquote class="testimonial-text">
+        “Un estudio de abogados altamente recomendable. Serios, comprometidos y enfocados en encontrar soluciones reales.”
+      </blockquote>
+      <p class="testimonial-author">— José Ramírez, Director de empresa</p>
+      <span class="carousel-arrow left">&#10094;</span>
+      <span class="carousel-arrow right">&#10095;</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACTO -->
+<section id="contacto" class="section container reveal">
+  <h2>Contáctanos</h2>
+  <p class="contact-subtitle">Déjanos tus datos y un miembro de nuestro equipo se comunicará contigo a la brevedad.</p>
+
+  <form class="contact-form reveal">
+    <div class="form-group">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" placeholder="Ejemplo: Juan Pérez" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" placeholder="ejemplo@correo.com" required />
+    </div>
+
+    <div class="form-group">
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" placeholder="+51 999 999 999" />
+    </div>
+
+    <div class="form-group">
+      <label for="asunto">Asunto</label>
+      <select id="asunto" required>
+        <option value="">Selecciona una opción</option>
+        <option value="consulta">Consulta legal</option>
+        <option value="cita">Agendar una cita</option>
+        <option value="documentos">Revisión de documentos</option>
+        <option value="otros">Otros</option>
+      </select>
+    </div>
+
+    <div class="form-group full">
+      <label for="mensaje">Tu mensaje</label>
+      <textarea id="mensaje" rows="5" placeholder="Escribe aquí tu mensaje..." required></textarea>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit">Enviar Mensaje</button>
+    </div>
+  </form>
+</section>
+
+
+  <footer class="">
+    <p>&copy; 2025 Estudio Jurídico. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
