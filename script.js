@@ -40,6 +40,43 @@ navLinks.querySelectorAll("a").forEach((link) => {
   });
 });
 
+// Servicios
+
+
+const tabs = document.querySelectorAll(".tab-btn");
+const contents = document.querySelectorAll(".tab-content");
+
+function showTab(tabId) {
+  // Ocultar todas
+  contents.forEach(content => content.classList.remove("active"));
+
+  // Mostrar pestaña seleccionada
+  const target = document.getElementById(tabId);
+  target.classList.add("active");
+}
+
+
+// Eventos de click
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(btn => btn.classList.remove("active"));
+    tab.classList.add("active");
+    showTab(tab.dataset.tab);
+  });
+});
+
+// Inicializar primera pestaña
+window.addEventListener("DOMContentLoaded", () => {
+  tabs[0].classList.add("active");
+  showTab(tabs[0].dataset.tab);
+});
+
+
+
+
+
+
+
 //Testimonios
 const slides = document.querySelectorAll('.testimonial-slide');
 slides.forEach(slide => {

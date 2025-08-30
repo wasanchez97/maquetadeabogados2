@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Estudio Jurídico</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -59,34 +59,118 @@
   </div>
 </section>
 
+<!-- SERVICIOS -->
+<section class="servicios-section reveal" id="servicios">
+  <div class="servicios-header">
+    <h2>Servicios</h2>
 
+    <!-- Contenedor que incluye las tabs y el dropdown -->
+    <div class="tabs-header">
+      <!-- Pestañas (desktop / tablet) -->
+      <div class="tabs" role="tablist" aria-label="Servicios">
+        <button id="tab-btn-tab1" class="tab-btn active" data-tab="tab1" role="tab" aria-selected="true" aria-controls="tab1">Asesoría Legal</button>
+        <button id="tab-btn-tab2" class="tab-btn" data-tab="tab2" role="tab" aria-selected="false" aria-controls="tab2">Defensa Jurídica</button>
+        <button id="tab-btn-tab3" class="tab-btn" data-tab="tab3" role="tab" aria-selected="false" aria-controls="tab3">Contratos</button>
+        <button id="tab-btn-tab4" class="tab-btn" data-tab="tab4" role="tab" aria-selected="false" aria-controls="tab4">Derecho Laboral</button>
+        <button id="tab-btn-tab5" class="tab-btn" data-tab="tab5" role="tab" aria-selected="false" aria-controls="tab5">Propiedad Intelectual</button>
+      </div>
 
- <section id="servicios" class="section container reveal">
-  <h2 class="section-title">Nuestros Servicios</h2>
-  <div class="servicios-grid">
-    
-    <!-- Servicio 1 -->
-    <div class="servicio-card reveal">
-      <div class="servicio-bg" style="background-image: url('https://images.unsplash.com/photo-1528747045269-390fe33c19d4?auto=format&fit=crop&w=1200&q=80');"></div>
-      <div class="servicio-content">
-        <h3>Asesoría Corporativa</h3>
-        <p>Soluciones legales estratégicas para empresas en cada etapa: constitución, fusiones, contratos y operaciones internacionales.</p>
-        <a href="#contacto" class="cta-btn">Solicitar Asesoría</a>
+    </div>
+  </div>
+
+  <div class="tabs-container">
+    <div class="tab-contents-wrapper">
+      <!-- Tab 1 -->
+      <div id="tab1" class="tab-content active" role="tabpanel" aria-labelledby="tab-btn-tab1">
+        <div class="tab-inner">
+          <div class="tab-img">
+            <img src="https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Asesoría legal">
+          </div>
+          <div class="tab-text">
+            <h3>Asesoría Legal</h3>
+            <p>Brindamos asesoría legal integral adaptada a tus necesidades. Analizamos cada situación con detalle para ofrecer soluciones claras y efectivas.</p>
+           <div class="cta-container">
+          <a href="#contacto" class="cta-btn">Solicitar Asesoría</a>
+        </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2 -->
+      <div id="tab2" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-tab2">
+        <div class="tab-inner">
+          <div class="tab-img">
+            <img src="https://images.pexels.com/photos/4427614/pexels-photo-4427614.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Defensa jurídica">
+          </div>
+          <div class="tab-text">
+            <h3>Defensa Jurídica</h3>
+            <p>Nuestra defensa es sólida, estratégica y comprometida con tus derechos. Te representamos en audiencias y negociaciones con experiencia.</p>
+           <div class="cta-container">
+          <a href="#contacto" class="cta-btn">Solicitar Defensa</a>
+        </div>
+          </div>
+        </div>
+      
+      </div>
+
+      <!-- Tab 3 -->
+      <div id="tab3" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-tab3">
+        <div class="tab-inner">
+          <div class="tab-img">
+            <img src="https://images.pexels.com/photos/5673481/pexels-photo-5673481.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Contratos">
+          </div>
+          <div class="tab-text">
+            <h3>Contratos</h3>
+            <p>Redactamos y revisamos contratos que protegen tus intereses y evitan conflictos futuros. Documentación clara y segura.</p>
+            <div class="cta-container">
+          <a href="#contacto" class="cta-btn">Revisar Contrato</a>
+        </div>
+          </div>
+        </div>
+      
+      </div>
+
+      <!-- Tab 4 -->
+      <div id="tab4" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-tab4">
+        <div class="tab-inner">
+          <div class="tab-img">
+            <img src="https://images.pexels.com/photos/6077327/pexels-photo-6077327.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Derecho laboral">
+          </div>
+          <div class="tab-text">
+            <h3>Derecho Laboral</h3>
+            <p>Asesoría en contratación, desvinculación, beneficios y cumplimiento normativo. Respaldo para empleadores y trabajadores.</p>
+             <div class="cta-container">
+          <a href="#contacto" class="cta-btn">Solicitar Asesoría Laboral</a>
+        </div>
+          </div>
+        </div>
+     
+      </div>
+
+      <!-- Tab 5 -->
+      <div id="tab5" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-tab5">
+        <div class="tab-inner">
+          <div class="tab-img">
+            <img src="https://images.pexels.com/photos/6140734/pexels-photo-6140734.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Propiedad intelectual">
+          </div>
+          <div class="tab-text">
+            <h3>Propiedad Intelectual</h3>
+            <p>Protegemos tus ideas y creaciones: registro de marcas, patentes y derechos de autor para asegurar tu ventaja competitiva.</p>
+          <div class="cta-container">
+          <a href="#contacto" class="cta-btn">Registrar Propiedad</a>
+        </div>
+          </div>
+        </div>
+      
       </div>
     </div>
-
-    <!-- Servicio 2 -->
-    <div class="servicio-card reveal">
-      <div class="servicio-bg" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80');"></div>
-      <div class="servicio-content">
-        <h3>Defensa Penal</h3>
-        <p>Defendemos tus derechos con ética, solidez jurídica y estrategias efectivas en todo tipo de procesos judiciales.</p>
-        <a href="#contacto" class="cta-btn">Solicitar Defensa</a>
-      </div>
-    </div>
-
   </div>
 </section>
+
+
+
+
+
 
 <section id="testimonios" class="section container reveal">
   <h2 class="section-title">Lo que dicen nuestros clientes</h2>

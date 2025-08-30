@@ -18,6 +18,7 @@ body {
   background: var(--light);
   color: var(--primary);
   scroll-behavior: smooth;
+  
 }
 
 /* --- Animaciones reveal --- */
@@ -292,110 +293,172 @@ nav {
   }
 }
 
-
-
-
-/* Título */
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  position: relative;
+/* === Servicios === */
+.servicios-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
-.section-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: #b9975b; /* dorado elegante */
-  margin: 1rem auto 0;
-  border-radius: 2px;
-}
-
-/* Grid */
-.servicios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-}
-
-/* Card */
-.servicio-card {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  height: 400px;
-  cursor: pointer;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  transition: transform 0.4s ease;
-}
-
-.servicio-card:hover {
-  transform: translateY(-10px) scale(1.02);
-}
-
-/* Imagen de fondo */
-.servicio-bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.5s ease;
-  z-index: 1;
-}
-
-.servicio-card:hover .servicio-bg {
-  transform: scale(1.1);
-  filter: brightness(0.7);
-}
-
-/* Contenido */
-.servicio-content {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.3));
-  color: #fff;
-  padding: 2rem;
+.servicios-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.servicios-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a2b57;
+  margin-bottom: 10px;
+}
+
+.tabs {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
   justify-content: flex-end;
-  z-index: 2;
-  transition: background 0.4s ease;
 }
 
-.servicio-card:hover .servicio-content {
-  background: linear-gradient(to top, rgba(185,151,91,0.85), rgba(0,0,0,0.3)); /* dorado */
-}
-
-.servicio-content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.servicio-content p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-}
-
-/* CTA */
-.cta-btn {
-  align-self: flex-start;
-  background: #b9975b;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
-  text-decoration: none;
+.tab-btn {
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  background: #e6e6e6;
+  color: #333;
   font-weight: 600;
+  border-radius: 2rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tab-btn.active {
+  background: #4a5c75;
+  color: #fff;
+}
+
+.tab-btn:hover {
+  background: #5e7191;
+  color: #fff;
+}
+
+.tabs-container {
+  position: relative;
+  min-height: 380px; /* asegura un espacio fijo para que no se mueva el contenedor */
+}
+
+/* --- Contenido con animación suave --- */
+.tab-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2.5s ease;
+}
+
+.tab-content.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+.tab-inner {
+  display: flex;
+  gap: 30px;
+  align-items: center; /* centra verticalmente texto e imagen */
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.tab-img {
+  flex: 1 1 35%;
+  min-width: 260px;
+  max-width: 350px; /* 🔑 mismo ancho máximo para todas las imágenes */
+}
+
+.tab-text {
+  flex: 1 1 60%;   /* texto más ancho */
+  min-width: 300px;
+}
+
+.tab-img img {
+  width: 100%;
+  height: 250px; /* 🔑 altura fija */
+  object-fit: cover; /* mantiene proporción recortando */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.tab-text p {
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* --- CTA --- */
+.cta-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  align-items: center;
+  background: #0a2b57;
+  color: #fff;
+  font-weight: 600; 
+  border-radius: 2rem;
+  text-decoration: none;
   transition: background 0.3s ease;
+}
+.tab-text .cta-container {
+  text-align: center;
 }
 
 .cta-btn:hover {
-  background: #937941;
+  background: #123d77;
 }
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .tab-inner {
+    gap: 20px;
+  }
+  .tab-img img {
+    max-height: 300px;
+  }
+}
+
+/* Para móviles (pantallas pequeñas) */
+@media (max-width: 768px) {
+  .tabs {
+    flex-wrap: wrap; /* permite que se acomoden en varias filas si no entran */
+    justify-content: center;
+  }
+
+  .tabs button {
+    font-size: 0.8rem;   /* más compacto */
+    padding: 6px 10px;
+    margin: 3px;         /* espacio entre botones */
+  }
+}
+
+/* Para móviles muy pequeños (ej. 360px de ancho) */
+@media (max-width: 480px) {
+  .tabs button {
+    font-size: 0.7rem;
+    padding: 5px 8px;
+  }
+}
+
+
+
+
+
 
 .testimonios-section {
   padding: 5rem 2rem;
