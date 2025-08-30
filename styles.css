@@ -21,6 +21,18 @@ body {
   
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* evita scroll lateral blanco */
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 /* --- Animaciones reveal --- */
 .reveal {
   opacity: 0;
