@@ -46,30 +46,21 @@ navLinks.querySelectorAll("a").forEach((link) => {
 const tabs = document.querySelectorAll(".tab-btn");
 const contents = document.querySelectorAll(".tab-content");
 
-function showTab(tabId) {
-  // Ocultar todas
-  contents.forEach(content => content.classList.remove("active"));
-
-  // Mostrar pestaña seleccionada
-  const target = document.getElementById(tabId);
-  target.classList.add("active");
-}
-
-
-// Eventos de click
 tabs.forEach(tab => {
   tab.addEventListener("click", () => {
     tabs.forEach(btn => btn.classList.remove("active"));
+    contents.forEach(content => content.classList.remove("active"));
     tab.classList.add("active");
-    showTab(tab.dataset.tab);
+    document.getElementById(tab.dataset.tab).classList.add("active");
   });
 });
 
 // Inicializar primera pestaña
 window.addEventListener("DOMContentLoaded", () => {
   tabs[0].classList.add("active");
-  showTab(tabs[0].dataset.tab);
+  contents[0].classList.add("active");
 });
+
 
 
 

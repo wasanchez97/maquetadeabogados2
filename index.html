@@ -7,10 +7,14 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <!-- Navbar -->
 <header id="navbar">
   <nav class="container">
-    <h1 class="logo">Estudio Legal</h1>
+    <!-- Logo -->
+    <div class="logo">
+      <img src="tu-logo.png" alt="Logo Alarco">
+    </div>
 
     <!-- Botón hamburguesa -->
     <div class="hamburger" id="hamburger">
@@ -21,11 +25,12 @@
 
     <!-- Menú de navegación -->
     <ul class="nav-links" id="nav-links">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#valores">Valores</a></li>
       <li><a href="#testimonios">Testimonios</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#pasos">Pasos</a></li>
+      <li><a href="#contacto"><button class="btn-contacto">CONTACTO</button></a></li>
     </ul>
   </nav>
 </header>
@@ -33,15 +38,120 @@
   <!-- Secciones -->
  <section id="inicio" class="hero reveal">
   <div class="hero-content">
-    <h2 class="hero-title">Defendemos tus derechos con experiencia y compromiso</h2>
-    <p class="hero-subtitle">Más de 20 años brindando asesoría legal integral en Lima y todo el Perú.</p>
-    <a href="#contacto" class="btn-cta">Agendar Consulta</a>
+    <h2 class="hero-title">Seguridad legal y confianza en cada inversión.</h2>
+    <p class="hero-subtitle">Cada inversión inmobiliaria debe ser segura y confiable respaldada por nuestra visión legal y finanicera que protege tu patrimonio. </p>
+    <a href="#contacto" class="btn-cta">SOLICITAR UNA ASESORÍA</a>
   </div>
   <!-- Indicador scroll -->
   <div class="scroll-indicator">
     <span></span>
   </div>
 </section>
+
+
+<!-- SERVICIOS -->
+<!-- SERVICIOS -->
+<section class="servicios-section reveal" id="servicios">
+  <div class="servicios-header">
+    <div class="titulo-servicios">
+      <h2>Areas de Práctica</h2>
+      <p class="subtitulo">De alto impacto</p>
+    </div>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="tab1">Títulos y Contratos</button>
+      <button class="tab-btn" data-tab="tab2">Gestión Notarial</button>
+      <button class="tab-btn" data-tab="tab3">Junta de Propietarios</button>
+      <button class="tab-btn" data-tab="tab4">Asesoría Legal Inmobiliaria</button>
+      <button class="tab-btn" data-tab="tab5">Proyectos Inmobiliarios</button>
+    </div>
+  </div>
+
+  <div class="tabs-container">
+    <!-- Tab 1 -->
+    <div id="tab1" class="tab-content active">
+      <div class="tab-inner">
+        <div class="tab-img">
+          <img src="https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Asesoría legal">
+        </div>
+        <div class="tab-text">
+          <h3>Títulos y Contratos</h3>
+          <p>Desde el estudio de títulos para compra y venta con créditos hipotecarios hasta la redacción de contratos de compraventa, arrendamiento y otros acuerdos de propiedad para colectivos. Así mismo se realiza un Plan de Trabajo para inmobiliarias que buscan atender su área de pos venta en formalización de los títulos de propiedad.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2 -->
+    <div id="tab2" class="tab-content">
+      <div class="tab-inner">
+        <div class="tab-img">
+          <img src="https://images.pexels.com/photos/4427614/pexels-photo-4427614.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gestión Notarial">
+        </div>
+        <div class="tab-text">
+          <h3>Gestión Notarial</h3>
+          <p>Brindamos soporte en trámites y procesos notariales, garantizando agilidad y seguridad jurídica en la formalización de documentos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3 -->
+    <div id="tab3" class="tab-content">
+      <div class="tab-inner">
+        <div class="tab-img">
+          <img src="https://images.pexels.com/photos/5673481/pexels-photo-5673481.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Junta de Propietarios">
+        </div>
+        <div class="tab-text">
+          <h3>Junta de Propietarios</h3>
+          <p>Asesoramos en la organización, formalización y cumplimiento normativo de juntas de propietarios, asegurando la buena gestión de inmuebles colectivos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 4 -->
+    <div id="tab4" class="tab-content">
+      <div class="tab-inner">
+        <div class="tab-img">
+          <img src="https://images.pexels.com/photos/6077327/pexels-photo-6077327.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Asesoría Inmobiliaria">
+        </div>
+        <div class="tab-text">
+          <h3>Asesoría Legal Inmobiliaria</h3>
+          <p>Consultoría especializada en operaciones inmobiliarias, arrendamientos y derechos de propiedad, ofreciendo respaldo jurídico integral.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 5 -->
+    <div id="tab5" class="tab-content">
+      <div class="tab-inner">
+        <div class="tab-img">
+          <img src="https://images.pexels.com/photos/6140734/pexels-photo-6140734.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Proyectos Inmobiliarios">
+        </div>
+        <div class="tab-text">
+          <h3>Proyectos Inmobiliarios</h3>
+          <p>Acompañamos el desarrollo de proyectos inmobiliarios desde la fase legal, asegurando cumplimiento normativo y protección de inversiones.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final reveal">
+  <div class="cta-content">
+    <div class="cta-text">
+      <h3>Resuelve tus dudas legales en minutos</h3>
+      <p>Listos para escuchar tus necesidades legales para poder asesorarte con ética y honestidad.</p>
+    </div>
+    <div class="cta-button">
+      <a href="#contacto">QUIERO UNA CONSULTA</a>
+    </div>
+    <div class="cta-phone">
+      <p>(51) 99 166 573</p>
+      <span>Escríbenos y llámanos. Siempre listos.</span>
+    </div>
+  </div>
+</section>
+
+
 
 <!-- SOBRE NOSOTROS -->
 <section id="nosotros" class="section container reveal">
@@ -58,115 +168,6 @@
     </div>
   </div>
 </section>
-
-<!-- SERVICIOS -->
-<section class="servicios-section reveal" id="servicios">
-  <div class="servicios-header">
-    <h2>Servicios</h2>
-
-    <!-- Contenedor que incluye las tabs y el dropdown -->
-    <div class="tabs-header">
-      <!-- Pestañas (desktop / tablet) -->
-      <div class="tabs" role="tablist" aria-label="Servicios">
-        <button id="tab-btn-tab1" class="tab-btn active" data-tab="tab1" role="tab" aria-selected="true" aria-controls="tab1">Asesoría Legal</button>
-        <button id="tab-btn-tab2" class="tab-btn" data-tab="tab2" role="tab" aria-selected="false" aria-controls="tab2">Defensa Jurídica</button>
-        <button id="tab-btn-tab3" class="tab-btn" data-tab="tab3" role="tab" aria-selected="false" aria-controls="tab3">Contratos</button>
-        <button id="tab-btn-tab4" class="tab-btn" data-tab="tab4" role="tab" aria-selected="false" aria-controls="tab4">Derecho Laboral</button>
-        <button id="tab-btn-tab5" class="tab-btn" data-tab="tab5" role="tab" aria-selected="false" aria-controls="tab5">Propiedad Intelectual</button>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="tabs-container">
-    <div class="tab-contents-wrapper">
-      <!-- Tab 1 -->
-      <div id="tab1" class="tab-content active" role="tabpanel" aria-labelledby="tab-btn-tab1">
-        <div class="tab-inner">
-          <div class="tab-img">
-            <img src="https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Asesoría legal">
-          </div>
-          <div class="tab-text">
-            <h3>Asesoría Legal</h3>
-            <p>Brindamos asesoría legal integral adaptada a tus necesidades. Analizamos cada situación con detalle para ofrecer soluciones claras y efectivas.</p>
-           <div class="cta-container">
-          <a href="#contacto" class="cta-btn">Solicitar Asesoría</a>
-        </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tab 2 -->
-      <div id="tab2" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-tab2">
-        <div class="tab-inner">
-          <div class="tab-img">
-            <img src="https://images.pexels.com/photos/4427614/pexels-photo-4427614.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Defensa jurídica">
-          </div>
-          <div class="tab-text">
-            <h3>Defensa Jurídica</h3>
-            <p>Nuestra defensa es sólida, estratégica y comprometida con tus derechos. Te representamos en audiencias y negociaciones con experiencia.</p>
-           <div class="cta-container">
-          <a href="#contacto" class="cta-btn">Solicitar Defensa</a>
-        </div>
-          </div>
-        </div>
-      
-      </div>
-
-      <!-- Tab 3 -->
-      <div id="tab3" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-tab3">
-        <div class="tab-inner">
-          <div class="tab-img">
-            <img src="https://images.pexels.com/photos/5673481/pexels-photo-5673481.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Contratos">
-          </div>
-          <div class="tab-text">
-            <h3>Contratos</h3>
-            <p>Redactamos y revisamos contratos que protegen tus intereses y evitan conflictos futuros. Documentación clara y segura.</p>
-            <div class="cta-container">
-          <a href="#contacto" class="cta-btn">Revisar Contrato</a>
-        </div>
-          </div>
-        </div>
-      
-      </div>
-
-      <!-- Tab 4 -->
-      <div id="tab4" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-tab4">
-        <div class="tab-inner">
-          <div class="tab-img">
-            <img src="https://images.pexels.com/photos/6077327/pexels-photo-6077327.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Derecho laboral">
-          </div>
-          <div class="tab-text">
-            <h3>Derecho Laboral</h3>
-            <p>Asesoría en contratación, desvinculación, beneficios y cumplimiento normativo. Respaldo para empleadores y trabajadores.</p>
-             <div class="cta-container">
-          <a href="#contacto" class="cta-btn">Solicitar Asesoría Laboral</a>
-        </div>
-          </div>
-        </div>
-     
-      </div>
-
-      <!-- Tab 5 -->
-      <div id="tab5" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-tab5">
-        <div class="tab-inner">
-          <div class="tab-img">
-            <img src="https://images.pexels.com/photos/6140734/pexels-photo-6140734.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Propiedad intelectual">
-          </div>
-          <div class="tab-text">
-            <h3>Propiedad Intelectual</h3>
-            <p>Protegemos tus ideas y creaciones: registro de marcas, patentes y derechos de autor para asegurar tu ventaja competitiva.</p>
-          <div class="cta-container">
-          <a href="#contacto" class="cta-btn">Registrar Propiedad</a>
-        </div>
-          </div>
-        </div>
-      
-      </div>
-    </div>
-  </div>
-</section>
-
 
 
 
