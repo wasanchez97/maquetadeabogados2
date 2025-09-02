@@ -62,12 +62,6 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-
-
-
-
-
 //Testimonios
 const slides = document.querySelectorAll('.testimonial-slide');
 slides.forEach(slide => {
