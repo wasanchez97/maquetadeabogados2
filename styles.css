@@ -959,53 +959,74 @@ section.valores .intro {
 }
 
 @media (max-width: 650px) {
-  
-section.valores{
-  padding-top: 70px;
-}
-  section.valores h2 { font-size: 1.35rem; }
-  section.valores h3 { font-size: 1.08rem; }
-  nav .nav-title { font-size: 1.18rem; }
+  section.valores {
+    padding-top: 70px;
+    text-align: center;
+  }
+
+  section.valores h2 { 
+    font-size: 1.35rem; 
+  }
+  section.valores h3 { 
+    font-size: 1.08rem; 
+  }
+  nav .nav-title { 
+    font-size: 1.18rem; 
+  }
 
   /* --- Carrusel MÓVIL --- */
-    .valores-cards {
+  .valores-cards {
+    display: flex;
     flex-wrap: nowrap;
-    gap: 16px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
-    padding-bottom: 6px;
-    width: 343px;
-    height: 262px;
+    gap: 16px;
+    padding: 0 16px;
+    width: 100%;
+    height: auto;
   }
-  .valores-cards::-webkit-scrollbar { display: none; } /* oculta scrollbar webkit */
 
-   .valor-card {
-    flex: 0 0 90%; 
+  .valores-cards::-webkit-scrollbar { 
+    display: none; 
+  } /* oculta scrollbar webkit */
+
+  .valor-card {
+    flex: 0 0 100%;   /* ocupa todo el ancho */
     max-width: 100%;
-    min-width: 100%;             /* todas del mismo ancho */         /* asegura que no se achiquen */
-    scroll-snap-align: center;  /* centra cada card al parar */
+    scroll-snap-align: center;  /* centra cada card */
+    box-sizing: border-box;
   }
 
-  .valor-title{
-    width: 360px;
+  .valor-title {
     margin: 16px 0;
-    width: 345  px;
-  
-  }
-  .valor-desc{
- text-align: center;
- padding-left: 45px;
- padding-right: 20px;
+    font-size: 1.2rem;
   }
 
-  /* mostrar flechas SOLO en móvil */
+  .valor-desc {
+    text-align: center;
+    padding: 0 24px;
+    font-size: 1rem;
+  }
+
+  /* Flechas visibles SOLO en móvil */
   .carousel-btn {
     display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: none;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    cursor: pointer;
   }
 
-  
+  .carousel-btn.prev { left: 10px; }
+  .carousel-btn.next { right: 10px; }
 }
+
 
 /* === Testimonios === */
 
