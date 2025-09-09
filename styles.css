@@ -676,6 +676,7 @@ nav {
     white-space: nowrap;            
     padding-bottom: 8px;
     -webkit-overflow-scrolling: touch;
+    
   }
 
   .tab-btn {
@@ -718,7 +719,10 @@ nav {
       margin: 0;
       padding: 16px;
     }
- 
+
+    .servicios-header{
+    margin-top: 60px;
+    }
   
   .tabs {
     display: flex;
@@ -892,7 +896,7 @@ section.valores .intro {
   max-width: 350px;
   text-align: center;
   padding: 25px 18px 18px 18px;
-  background: #fafafa;
+  background: transparent;
   border-radius: 18px;
   box-shadow: 0 4px 18px rgba(210, 210, 210, 0.15);
 }
@@ -926,9 +930,9 @@ section.valores .intro {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.65);
-  color: #fff;
-  border: none;
+  background: transparent;
+  color: black;
+  border: 2px solid;
   font-size: 1.6rem;
   padding: 6px 10px;
   border-radius: 50%;
@@ -936,8 +940,8 @@ section.valores .intro {
   z-index: 5;
   display: none; /* <-- se activa solo en mobile */
 }
-.carousel-btn.prev { left: 8px; }
-.carousel-btn.next { right: 8px; }
+.carousel-btn.prev { left: 8px;}
+.carousel-btn.next { right: 8px;}
 
 /* --- RESPONSIVE --- */
 @media (max-width: 900px) {
@@ -955,6 +959,10 @@ section.valores .intro {
 }
 
 @media (max-width: 650px) {
+  
+section.valores{
+  padding-top: 70px;
+}
   section.valores h2 { font-size: 1.35rem; }
   section.valores h3 { font-size: 1.08rem; }
   nav .nav-title { font-size: 1.18rem; }
