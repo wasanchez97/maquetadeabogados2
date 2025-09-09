@@ -146,17 +146,80 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //Testimonios
-const slides = document.querySelectorAll('.testimonial-slide');
-slides.forEach(slide => {
-  slide.querySelector('.carousel-arrow.left').addEventListener('click', () => changeSlide(-1));
-  slide.querySelector('.carousel-arrow.right').addEventListener('click', () => changeSlide(1));
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".testimonial-slide");
+  const dotsContainer = document.querySelector(".testimonial-dots");
+
+  // Crear dots según número de slides
+  slides.forEach((_, i) => {
+    const dot = document.createElement("span");
+    if (i === 0) dot.classList.add("active");
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = dotsContainer.querySelectorAll("span");
+
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach((s, j) => {
+      s.classList.toggle("active", j === i);
+    });
+    dots.forEach((d, j) => {
+      d.classList.toggle("active", j === i);
+    });
+    index = i;
+  }
+
+  // Dots click
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => showSlide(i));
+  });
+
+  // Flechas (solo desktop, siguen funcionando)
+  const leftArrows = document.querySelectorAll(".carousel-arrow.left");
+  const rightArrows = document.querySelectorAll(".carousel-arrow.right");
+
+  leftArrows.forEach(arrow => {
+    arrow.addEventListener("click", () => {
+      let newIndex = (index - 1 + slides.length) % slides.length;
+      showSlide(newIndex);
+    });
+  });
+
+  rightArrows.forEach(arrow => {
+    arrow.addEventListener("click", () => {
+      let newIndex = (index + 1) % slides.length;
+      showSlide(newIndex);
+    });
+  });
+
+  // Swipe en móvil
+  let startX = 0;
+  let endX = 0;
+
+  document.querySelector(".testimonial-carousel").addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  document.querySelector(".testimonial-carousel").addEventListener("touchend", (e) => {
+    endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) {
+      // swipe left → siguiente
+      let newIndex = (index + 1) % slides.length;
+      showSlide(newIndex);
+    } else if (endX - startX > 50) {
+      // swipe right → anterior
+      let newIndex = (index - 1 + slides.length) % slides.length;
+      showSlide(newIndex);
+    }
+  });
+
+  // Autoplay opcional
+  setInterval(() => {
+    let newIndex = (index + 1) % slides.length;
+    showSlide(newIndex);
+  }, 6000);
 });
 
-let currentSlide = 0;
-
-function changeSlide(direction) {
-  slides[currentSlide].classList.remove('active');
-  currentSlide = (currentSlide + direction + slides.length) % slides.length;
-  slides[currentSlide].classList.add('active');
-}
 

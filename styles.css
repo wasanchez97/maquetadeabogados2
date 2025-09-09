@@ -1138,10 +1138,10 @@ section.valores .intro {
 
 .carousel-arrow {
   background: #fff;
-  border: 2px solid #d3d3d3;
+  border: 2px solid #131313;
   border-radius: 50%;
-  color: #b0b0b0;
-  font-size: 1rem;
+  color: black;
+  font-size: 1.2rem;
   padding: 8px 16px;
   position: absolute;
   top: 50%;
@@ -1152,6 +1152,7 @@ section.valores .intro {
 
 .carousel-arrow.left {
   left: 34px;
+  
 }
 
 .carousel-arrow.right {
@@ -1165,46 +1166,81 @@ section.valores .intro {
 }
 
 @media (max-width: 768px) {
-  .testimonios-section{
+  .testimonios-section {
     margin: 16px;
     background-color: transparent;
+    padding: 40px 0;
   }
-  .testimonios-header h2,p{
-    font-size: 28px;
+
+  .testimonios-header {
+    text-align: center;
+    margin-bottom: 24px;
   }
+
+  .clientes-title {
+    font-size: 24px;
+  }
+
+  .clientes-subtitle {
+    font-size: 18px;
+  }
+
   .testimonial-carousel {
-    padding: 18px 7vw;
+    padding: 24px 20px;
+    border-radius: 18px;
     min-height: unset;
-    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    background: #fff;
   }
+
   .testimonial-text {
     font-size: 1rem;
-    margin-bottom: 18px;
-    padding: 0 3vw;
+    margin-bottom: 14px;
+    line-height: 1.6;
+    text-align: left;
+    position: relative;
   }
+
+  /* Comillas grises al inicio del testimonio */
+  .testimonial-text::before {
+    content: "“";
+    font-size: 2rem;
+    color: #aaa;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+  }
+
   .testimonial-author {
-    font-size: 0.92rem;
-    margin-top: 16px;
-    padding-bottom: 6px;
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: 600;
+    text-align: left;
   }
+
+  /* Flechas fuera en móvil */
   .carousel-arrow {
-    font-size: 1.6rem;
-    padding: 4px 9px;
-    top: auto;
-    bottom: 26px;
-    transform: none;
-    background: #fff;
-    border: 2px solid #d3d3d3;
+    display: none;
   }
-  .carousel-arrow.left {
-    left: 10vw;
-    bottom: 26px;
-    right: auto;
+
+  /* Dots abajo visibles y centrados */
+  .testimonial-dots {
+    text-align: center;
+    margin-top: 16px;
   }
-  .carousel-arrow.right {
-    right: 10vw;
-    bottom: 26px;
-    left: auto;
+
+  .testimonial-dots span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .testimonial-dots span.active {
+    background: #555;
   }
 }
 
