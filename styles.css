@@ -13,8 +13,8 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  line-height: 1.6;
+  font-family: roboto;
+  line-height: 1;
   background: var(--light);
   color: var(--primary);
   scroll-behavior: smooth;
