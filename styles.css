@@ -259,7 +259,7 @@ nav {
 }
 .btn-cta {
   display: inline-block;
-  padding: 15px 25px;
+  padding: 20px 32px;
   background: #e67d2200;
   color: #fff;
   border: 0.15rem solid;
@@ -268,7 +268,7 @@ nav {
   font-size: 16px;
   text-decoration: none;
   transition: all 0.3s ease;
-  max-width: 267px;
+  width: 267px;
   height: 56px;
   opacity: 0;
   animation: fadeInText 1.5s ease forwards 1.8s;
