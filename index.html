@@ -73,7 +73,7 @@
         </div>
         <div class="tab-text">
           <h3>Títulos y Contratos</h3>
-          <p>Desde el estudio de títulos para compra y venta con créditos hipotecarios hasta la redacción de contratos de compraventa, arrendamiento y otros acuerdos de propiedad para colectivos. Así mismo se realiza un Plan de Trabajo para inmobiliarias que buscan atender su área de pos venta en formalización de los títulos de propiedad.</p>
+          <p>Desde el estudio de títulos para compra y venta con créditos hipotecarios hasta la redacción de contratos de compraventa, arrendamiento y otros acuerdos de propiedad para colectivos. <br> <br> Así mismo se realiza un Plan de Trabajo para inmobiliarias que buscan atender su área de pos venta en formalización de los títulos de propiedad.</p>
         </div>
       </div>
     </div>
@@ -174,12 +174,15 @@
 
 
 <!-- SOBRE Valores -->
- <section class="valores" id="valores">
-    <h2>¿Por qué elegir Estudio Alarco</h2>
-    <h3>Para tus casos Inmobiliarios?</h3>
-    <div class="intro">
-      Porque buscamos ayudarte a proteger el patrimonio de nuestros clientes a través de asesoría y representación legal de excelencia, ofreciendo soluciones seguras, prácticas y transparentes, además de trabajar siempre con valores como:
-    </div>
+<section class="valores reveal" id="valores">
+  <h2>¿Por qué elegir Estudio Alarco</h2>
+  <h3>Para tus casos Inmobiliarios?</h3>
+  <div class="intro">
+    Porque buscamos ayudarte a proteger el patrimonio de nuestros clientes a través de asesoría y representación legal de excelencia, ofreciendo soluciones seguras, prácticas y transparentes, además de trabajar siempre con valores como:
+  </div>
+
+  <div class="valores-carousel">
+    <button class="carousel-btn prev">&#10094;</button>
     <div class="valores-cards">
       <div class="valor-card">
         <span class="valor-icon"></span>
@@ -203,7 +206,10 @@
         </div>
       </div>
     </div>
-  </section>
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+</section>
+
 
 
 
@@ -277,52 +283,107 @@
 
 
 <!-- CONTACTO -->
-<section id="contacto" class="section container reveal">
-  <h2>Contáctanos</h2>
-  <p class="contact-subtitle">Déjanos tus datos y un miembro de nuestro equipo se comunicará contigo a la brevedad.</p>
-
-  <form class="contact-form reveal">
-    <div class="form-group">
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" placeholder="Ejemplo: Juan Pérez" required />
+<section id="contacto" class="section reveal">
+  <div class="contacto-content">
+    <!-- Texto a la izquierda -->
+    <div class="contacto-texto">
+      <h2>Tu asesoría legal empieza aquí,</h2>
+      <h3><em>hablemos hoy mismo.</em></h3>
+      <p>
+        Comparte los detalles de tu situación legal.  
+        Te brindaremos un análisis claro y soluciones prácticas para asegurar tu inversión inmobiliaria.
+      </p>
     </div>
 
-    <div class="form-group">
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" placeholder="ejemplo@correo.com" required />
-    </div>
+    <!-- Formulario a la derecha -->
+    <form class="contact-form reveal">
+      <div class="form-group full">
+        <input type="text" id="nombre" placeholder="Nombre" required />
+      </div>
 
-    <div class="form-group">
-      <label for="telefono">Teléfono</label>
-      <input type="tel" id="telefono" placeholder="+51 999 999 999" />
-    </div>
+      <div class="form-group">
+        <input type="tel" id="telefono" placeholder="Celular" />
+      </div>
+      <div class="form-group">
+        <input type="text" id="ciudad" placeholder="Ciudad" />
+      </div>
 
-    <div class="form-group">
-      <label for="asunto">Asunto</label>
-      <select id="asunto" required>
-        <option value="">Selecciona una opción</option>
-        <option value="consulta">Consulta legal</option>
-        <option value="cita">Agendar una cita</option>
-        <option value="documentos">Revisión de documentos</option>
-        <option value="otros">Otros</option>
-      </select>
-    </div>
+      <div class="form-group">
+        <input type="email" id="email" placeholder="Email" required />
+      </div>
+      <div class="form-group">
+        <input type="text" id="servicio" placeholder="Tipo de Servicio" />
+      </div>
 
-    <div class="form-group full">
-      <label for="mensaje">Tu mensaje</label>
-      <textarea id="mensaje" rows="5" placeholder="Escribe aquí tu mensaje..." required></textarea>
-    </div>
+      <div class="form-group full">
+        <textarea id="mensaje" rows="5" placeholder="Describe tu caso"></textarea>
+      </div>
 
-    <div class="form-actions">
-      <button type="submit">Enviar Mensaje</button>
-    </div>
-  </form>
+      <div class="form-actions">
+        <button type="submit" class="btn-form">SOLICITA UNA ASESORÍA</button>
+        <p class="nota">Usted recibirá una respuesta de nosotros dentro de 1 a 2 días hábiles.</p>
+      </div>
+    </form>
+  </div>
 </section>
+<footer class="footer">
+  <div class="footer-grid">
+
+    <!-- Columna 1: Logo + Links -->
+    <div class="footer-col footer-col1">
+      <div class="footer-logo">
+        <img src="logo.png" alt="Logo Alarco">
+      </div>
+      <div class="footer-links-grid">
+        <ul>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Valores</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Testimonios</a></li>
+          <li><a href="#">Pasos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Columna 2: Contacto -->
+    <div class="footer-col footer-col2">
+      <p><strong>telf.</strong> +51 99 166 573</p>
+      <p><a href="mailto:contacto@estudioalarco.com.pe">contacto@estudioalarco.com.pe</a></p>
+      <p>
+        <br>
+        <strong>Horario de atención regular</strong><br>
+        Lunes a Viernes: 9am a 6pm
+      </p>
+    </div>
+
+    <!-- Columna 3: Info + Redes -->
+    <div class="footer-col footer-col3">
+      <p class="footer-text">Orden, confianza y respaldo legal en cada decisión inmobiliaria.</p>
+      <p class="footer-subtext">Especialistas en derecho inmobiliario y corporativo con visión financiera.</p>
+      <div class="footer-social">
+        <span>Síguenos:</span>
+        <a href="#"><div class="social-circle"></div></a>
+        <a href="#"><div class="social-circle"></div></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Línea inferior -->
+  <div class="footer-bottom">
+    <p>©2025 Estudio Alarco. Todos los derechos reservados. R.U.C.00000000000.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Políticas de Privacidad</a>
+      <a href="#">Términos de servicio</a>
+      <a href="#">Desarrollado por 3MStudio</a>
+    </div>
+  </div>
+</footer>
 
 
-  <footer class="">
-    <p>&copy; 2025 Estudio Jurídico. Todos los derechos reservados.</p>
-  </footer>
+ 
 
   <script src="script.js"></script>
 </body>
