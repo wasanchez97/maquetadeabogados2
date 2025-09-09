@@ -714,9 +714,12 @@ nav {
 @media (max-width: 480px) {
   /* Tabs horizontales más compactos */
     .servicios-section{
-      max-width: 100%;
-      height: 830px;
+      height: 890px;
+      margin: 0;
+      padding: 16px;
     }
+ 
+  
   .tabs {
     display: flex;
     gap: 10px;
@@ -726,56 +729,47 @@ nav {
     -webkit-overflow-scrolling: touch;
   }
   .tabs-container{
-  padding-left: 0;  
+    padding:0 ;
+    margin: 0;
+      width: 500px;
+      margin-top: 40px;  
   }
+  
   .tab-inner {
     flex-direction: column-reverse;
-    width: 335PX;
-    gap:0.5rem;
-    align-items: center;
-    margin: 0;
-    padding: 0  ;
-   
+    width: 358PX;
   }
-
+ 
   .tab-img {
     width: 343px;
     height: 272px;
-    margin-top: 24px;
     max-height: none;
   }
 
   .tab-text {
     max-height: none;
     text-align: justify;
+    width:333px;
+    margin: 0;
   }
 
   /* Ajustes de títulos y textos */
-  .titulo-servicios h2 {
-    font-size: 1.4rem;
+  .titulo-servicios h2 , p{
+    font-size: 28px;
   }
 
   .tab-text h3 {
-    font-size: 1.2rem;
+    font-size: 24px;
   }
 
   .tab-text p {
-    font-size: 0.9rem;
+    font-size: 16px;
   }
 
-  .cta-text h3 {
-    font-size: 1.4rem;
-  }
-
-  .cta-phone p {
-    font-size: 1.2rem;
-  }
-
-  .servicios-section,
   .cta-final {
-    margin-left: 10px;
-    margin-right: 10px;
+    padding: 10px;
     width: 343px;
+    align-items: center;
 
   }
 }
@@ -1122,6 +1116,13 @@ section.valores .intro {
 }
 
 @media (max-width: 768px) {
+  .testimonios-section{
+    margin: 16px;
+    background-color: transparent;
+  }
+  .testimonios-header h2,p{
+    font-size: 28px;
+  }
   .testimonial-carousel {
     padding: 18px 7vw;
     min-height: unset;
@@ -1376,17 +1377,15 @@ textarea {
   color: #2c3e50;
   font-family: "Arial", sans-serif;
   padding: 2rem 5% 1rem 5%;
-  max-height: 383px;
 }
 
 /* ===== Grid principal (3 columnas) ===== */
 .footer-grid {
   display: grid;
   max-width: 1296px;
-  max-height: 213px;
   grid-template-columns: 1fr 1fr 1.2fr;
   gap: 2rem;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem auto;
 }
 
 /* ===== Columna 1: Logo + Links ===== */
@@ -1395,13 +1394,10 @@ textarea {
   margin-bottom: 1rem;
 }
 
-/* Subgrid de 2 columnas para links */
 .footer-links-grid {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 2.5rem;
-  max-width: 226px;
-  max-height: 82px;
+  gap: 1.2rem 2rem;
 }
 
 .footer-links-grid ul {
@@ -1429,8 +1425,6 @@ textarea {
 .footer-col2 {
   font-size: 0.95rem;
   line-height: 1.6;
-  max-width: 204px;
-  max-height: 213px;
 }
 
 .footer-col2 a {
@@ -1458,12 +1452,8 @@ textarea {
 .footer-social {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-}
-
-.footer-social span {
-  font-size: 0.9rem;
-  margin-right: 0.3rem;
+  gap: 0.8rem;
+  flex-wrap: wrap;
 }
 
 .social-circle {
@@ -1512,32 +1502,87 @@ textarea {
   }
 
   .footer-col3 {
-    grid-column: span 2; /* ocupa todo el ancho */
+    grid-column: span 2;
   }
 }
 
 @media (max-width: 600px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
+  .footer {
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem; /* más aire */
   }
 
-  .footer-col1,
-  .footer-col2,
-  .footer-col3 {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
     text-align: center;
   }
 
+  .footer-logo img {
+    margin: 0 auto 1rem auto;
+    max-width: 140px; /* logo más chico en móviles */
+  }
+
   .footer-links-grid {
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
+    grid-template-columns: 1fr; /* links en una sola columna */
+    gap: 0.8rem;
+  }
+
+  .footer-links-grid li {
+    margin-bottom: 0.4rem;
+  }
+
+  .footer-col2 {
+    margin: 0 auto;
+    max-width: 280px; /* no tan ancho */
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 
   .footer-social {
     justify-content: center;
+    margin-top: 1rem;
+    gap: 0.6rem;
+  }
+
+  .social-circle {
+    width: 26px;
+    height: 26px;
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+    gap: 0.8rem;
+    font-size: 0.8rem;
   }
+
+  .footer-bottom-links {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 1rem 1rem 1rem; /* menos padding lateral */
+  }
+
+  .footer-grid {
+    gap: 1.5rem;
+  }
+  .footer-col p{
+    font-size: 0.95rem;
+  }
+
+  .footer-links-grid a {
+    font-size: 0.88rem; /* texto más compacto */
+  }
+
+  .footer-subtext {
+    font-size: 0.88rem;
+  }
+  .footer-bottom p{
+    font-size: 0.7rem;
+  }
+
 }
