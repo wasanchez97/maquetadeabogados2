@@ -933,7 +933,7 @@ section.valores .intro {
   background: transparent;
   color: black;
   border: 2px solid;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   padding: 6px 10px;
   border-radius: 50%;
   cursor: pointer;
@@ -968,20 +968,35 @@ section.valores{
   nav .nav-title { font-size: 1.18rem; }
 
   /* --- Carrusel MÓVIL --- */
-  .valores-cards {
-    flex-wrap: nowrap;                 /* todas en fila (una a la vez) */
-    gap: 16px;                         /* separación entre slides */
-    overflow-x: auto;                  /* habilita swipe/scroll */
-    -webkit-overflow-scrolling: touch; /* suaviza en iOS */
-    scroll-snap-type: x mandatory;     /* snap al centro de cada card */
+    .valores-cards {
+    flex-wrap: nowrap;
+    gap: 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
     padding-bottom: 6px;
+    width: 343px;
+    height: 262px;
   }
   .valores-cards::-webkit-scrollbar { display: none; } /* oculta scrollbar webkit */
 
-  .valor-card {
-    flex: 0 0 88%;       /* ancho de cada slide (ajústalo si quieres ver más o menos "peek") */
-    scroll-snap-align: center;
-    max-width: none;     /* evita límite de 350px en móvil */
+   .valor-card {
+    flex: 0 0 90%; 
+    max-width: 100%;
+    min-width: 100%;             /* todas del mismo ancho */         /* asegura que no se achiquen */
+    scroll-snap-align: center;  /* centra cada card al parar */
+  }
+
+  .valor-title{
+    width: 360px;
+    margin: 16px 0;
+    width: 345  px;
+  
+  }
+  .valor-desc{
+ text-align: center;
+ padding-left: 45px;
+ padding-right: 20px;
   }
 
   /* mostrar flechas SOLO en móvil */
