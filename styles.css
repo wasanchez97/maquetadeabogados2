@@ -263,8 +263,8 @@ nav {
   background: #e67d2200;
   color: #fff;
   border: 0.15rem solid;
-  border-radius: 1rem;
-  font-weight: bold;
+  border-radius: 12px;
+  font-family: Roboto;
   font-size: 16px;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -273,6 +273,7 @@ nav {
   opacity: 0;
   animation: fadeInText 1.5s ease forwards 1.8s;
 }
+
 .btn-cta:hover {
   background: #363635;
   transform: scale(1.05);
