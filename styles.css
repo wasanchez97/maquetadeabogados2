@@ -242,11 +242,11 @@ nav {
   padding: 0 1rem;
   z-index: 2;
   animation: fadeUp 2s ease forwards;
-  margin: 144px;
+  margin: 144px 173px;
 }
 .hero-title {
   font-size: 60px;
-  line-height: 1.36;
+  line-height: 1.28;
   font-weight: 600;
   max-width: 842px;
    font-family: "Merriweather", serif;
