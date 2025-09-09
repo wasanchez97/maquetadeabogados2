@@ -249,6 +249,7 @@ nav {
   line-height: 1.5;
   font-weight: 700;
   max-width: 842px;
+   font-family: "Merriweather", serif;
   margin-bottom: 1rem;
   text-align: left;
   opacity: 0;
@@ -257,6 +258,7 @@ nav {
 .hero-subtitle {
   font-size: 24px;
   margin-bottom: 2rem;
+  font-family: "Source Sans 3", sans-serif;
   max-width: 732px;
   opacity: 0;
   animation: fadeInText 1.5s ease forwards 1.2s;
