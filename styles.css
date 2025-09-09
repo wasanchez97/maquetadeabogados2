@@ -98,6 +98,8 @@ nav {
 
 /* Botón contacto (preservar tamaño y estilo) */
 .btn-contacto {
+  display: flex;
+  align-items: center;
   background: #fff;
   border: 1PX solid;
   padding: 20px 30px;
