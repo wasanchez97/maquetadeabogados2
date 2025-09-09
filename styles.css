@@ -975,29 +975,34 @@ section.valores .intro {
   }
 
   /* --- Carrusel MÓVIL --- */
-  .valores-cards {
+   .valores-cards {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     gap: 16px;
-    padding: 0 40px;
     width: 100%;
     height: auto;
+    position: relative;
   }
 
   .valores-cards::-webkit-scrollbar { 
     display: none; 
-  } /* oculta scrollbar webkit */
-
-  .valor-card {
-    flex: 0 0 100%;   /* ocupa todo el ancho */
-    max-width: 100%;
-    scroll-snap-align: center;  /* centra cada card */
-    box-sizing: border-box;
+  }
+    .valores-cards::before,
+  .valores-cards::after {
+    content: "";
+    flex: 0 0 50%;   /* cada espaciador ocupa medio ancho */
   }
 
+
+.valor-card {
+    flex: 0 0 100%;        /* ocupa todo el ancho */
+    max-width: 100%;
+    scroll-snap-align: center; /* siempre centradas */
+    box-sizing: border-box;
+  }
   .valor-title {
     margin: 16px 0;
     font-size: 1.2rem;
