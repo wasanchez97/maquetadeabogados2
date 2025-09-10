@@ -432,53 +432,61 @@ nav {
 /* === Servicios === */
 .servicios-section {
   max-width: 1200px;
-  margin: 0 auto;
-   padding: 7rem 2rem;
-   margin-left: 144px;
-   margin-right: 144px;
+  padding-top: 40px;
+  margin-left: 144px;
+  margin-right: 144px;
   font-family: 'Segoe UI', Tahoma, sans-serif;
 }
-
+.servicios-container{
+  margin-top: 96px;
+  margin-bottom: 128px;
+  width: 1152px;
+  height: 440px;
+}
 .servicios-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   flex-wrap: wrap;
-  gap: 20px;
-  max-width: 1152px;
-  max-height: 120px;
+  gap: 80px;
+  width: 1152px;
+  height: 120px;
 }
 
-
+.titulo-servicios{
+  width: 336px;
+  height: 82px;
+}
 .titulo-servicios h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0a2b57;
+  font-size: 40px;
+  font-weight: 250;
+  line-height: 1.6;
+  width: 338px;
+  height: 37px;
+  font-family: "Merriweather", serif;
+  color: #0e0e0f;
 }
 
 .subtitulo {
   font-style: italic;
   font-weight: 400;
   color: #777;
-  font-size: 1.2rem;
-  margin-top: 4px;
+  font-size: 36px;
+  width: 336px;
+  height: 37px;
 }
 
-.global-container{
-  max-width: 1152px;
-  max-height: 442px;
-}
+
 
 /* --- Tabs --- */
 .tabs {
-  flex: 2 1 500px;
+  flex: 1 2 500px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   grid-auto-rows: auto;
-  max-height: 150px ;
   gap: 10px;
   justify-items: center;
-  width: 100%;
+  width: 736px;
+  height: 120px;
 }
 
 .tab-btn {
@@ -486,19 +494,19 @@ nav {
   border: 1px solid #bbb;
   color: #333;
   border-radius: 1rem;
-  padding: 10px 20px;
-  font-size: 0.8rem;
+  font-size: 14px;
   font-weight: 500;
   transition: background 0.3s ease, color 0.3s ease;
-  width: 100%;
-  max-width: 200px;
-  max-height: 250px;
+  width: 213px;
+  height: 46px;
 }
 
 .tab-btn.active {
   background: #444;
   color: #fff;
   border-color: #444;
+  width: 213px;
+  height: 46px;
 }
 
 .tab-btn:hover {
@@ -509,12 +517,14 @@ nav {
 /* --- Contenido Tabs --- */
 .tabs-container {
   position: relative;
-  min-height: 380px;
-  padding: 3rem;
+  width: 1152px;
+  height: 272px;
+  padding-bottom: auto;
 }
 
 .tab-content {
   display: none;
+
 }
 
 .tab-content.active {
@@ -523,23 +533,25 @@ nav {
 
 .tab-inner {
   display: flex;
-  gap: 4rem; /* Ajuste de separación imagen-texto */
+  gap: 96px; /* Ajuste de separación imagen-texto */
   align-items: center;
   flex-wrap: wrap;
   text-align: justify;
-  justify-content: center;
+  width: 1152px;
+  height: 272px;
+  margin-top: 48px;
 }
 
 .tab-img {
-  flex: 1 1 35%;
-  min-width: 280px;
+  flex: 1 1 25%;
+  min-width: 272px;
   max-width: 419px;
 }
 
 .tab-img img {
   width: 100%;
-  max-height: 272px;
-  max-width: 419px;
+  height: 272px;
+  width: 419px;
   object-fit: cover;
   border-radius: 16px;
 }
@@ -547,17 +559,22 @@ nav {
 .tab-text {
   flex: 1 1 65%;
   max-width: 488px;
-  max-height: 225px;
- margin: 40px;
+  max-height: 255px;
+ font-family: "Source Sans 3", sans-serif;
 }
 
 .tab-text h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  width: 488px;
+  height: 51px;
+  font-size: 36px;
+  margin-bottom: 24px;
+  margin-top: 0px;
+  color: black;
+  font-weight: 400;
 }
 
 .tab-text p {
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 1.6;
   color: #444;
 }
@@ -567,30 +584,38 @@ nav {
   background: #444;
   color: #fff;
   border-radius: 20px;
-  padding: 40px 20px;
+  padding: 52px 96px;
   margin-left: 144px;
   margin-right: 144px;
-  max-width: 1200px;
+  margin-bottom: 96px;
+  width: 1152px;
+  height: 243px;
 }
 
 .cta-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  column-gap: 2rem;
+  column-gap: 1.2rem;
   row-gap: 2rem;
-  margin-left: 96px;
+}
+
+.cta-text{
+  width: 369px;
+  height: 139px;
 }
 
 .cta-text h3 {
   font-size: 32px;
-  margin-bottom: 10px;
-  
+  font-family: "Merriweather", serif;
+  font-weight: 450;
+
 }
 
 .cta-text p {
   font-size: 16px;
   color: #ddd;
+  font-family: "Source Sans 3", sans-serif;
 }
 
 .cta-button {
@@ -600,22 +625,31 @@ nav {
 .cta-button a {
   background: #fff;
   color: #333;
-  padding: 12px 24px;
+  padding: 20px 32px;
   border-radius: 0.8rem;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
   text-decoration: none;
   display: inline-block;
 }
-
+.cta-phone{
+  line-height: 0.3;
+}
 .cta-phone p {
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 28px;
+  font-family: "Merriweather", serif;
+  font-weight: 200;
+  align-items: center;
+  width: 267px;
+  height: 35px;
   margin: 0;
 }
 
 .cta-phone span {
   font-size: 16px;
+  width: 267px;
+  height: 23px;
   color: #ddd;
 }
 
@@ -797,63 +831,75 @@ nav {
 
 /* === SOBRE NOSOTROS === */
 #nosotros {
-  padding: 6rem 2rem;
+  height: 736px;
+  padding-bottom: 96px;
+  padding-top: 130px;
+  padding-right: 144px;
   background: #f7f7f7; /* fondo suave como en la imagen */
 }
 
 .nosotros-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 60px;
-  margin-left: 144px;
-  margin-right: 144px;
-  max-width: 1200px;
-  margin: auto;
+  gap: 72px;
+  width:1296px;
+  max-height: 458px;
 }
 
 .nosotros-img {
   flex: 1;
-  max-height: 350px;
-  max-width: 600px;
+
 }
 
 .nosotros-img img {
   width: 100%;
-  border-radius: 20px;
+  margin: 0;
+  width: 635px;
+ height: 458px;
+  border-radius: 0px 30px 30px 0px;
   object-fit: cover;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .nosotros-texto {
   flex: 1;
-  max-width: 450px;
+  max-width: 589px;
+  height: 400px;
 }
 
 .nosotros-texto .subtitulo {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 24px;
+  width: 91px;
+  height: 34px;
+  font-weight: 400;
   color: #888;
-  margin-bottom: 10px;
   text-align: left;
+  margin-bottom: 9px;
+  font-family: "Source Sans 3", sans-serif;
   
 }
 
 .nosotros-texto h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+  font-size: 40px;
+  margin-bottom: 24px;
+  font-family: "Merriweather", serif;
   color: #111;
   line-height: 1.3;
   text-align: justify;
-  
+  font-weight: 400;
+  width: 589px;
+  height: 105px;
 }
 
 .nosotros-texto p {
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: "Source Sans 3", sans-serif;
   color: #444;
   margin-bottom: 15px;
   text-align: left;
+  width: 589px;
+  height: 114px;
 }
 
 /* === RESPONSIVE === */
@@ -870,37 +916,50 @@ nav {
 
 /* === Valores === */
 /* --- Tus estilos originales (mantener) --- */
-section.valores {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 7rem 2rem;
+
+#valores {
+  max-width: 1248px;
+  height: 739px;
+  margin: 96px 144px;
+  padding-top: 120px;
 }
+.valor-container{
+  max-width: 626px;
+  margin: 0 auto;
+  line-height: 1.2;
+}
+
 section.valores h2 {
   text-align: center;
-  font-size: 2.3rem;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: "Merriweather", serif;
   margin-bottom: 12px;
+  height: 49px;
   color: rgb(0, 0, 0);
 }
 section.valores h3 {
   text-align: center;
-  font-size: 1.7rem;
-  font-weight: 500;
+  font-size: 36px;
+  font-weight: 450;
   font-style: italic;
   color: #737373;
   margin-bottom: 22px;
+
 }
 section.valores .intro {
   text-align: center;
   font-size: 1.04rem;
   margin-bottom: 36px;
+  line-height: 1.4;
   color: #222;
 }
 
 /* Layout original de las cards (desktop) */
 .valores-cards {
   display: flex;
-  gap: 55px;
+  gap: 65px;
+  padding-top:64px ;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -908,13 +967,11 @@ section.valores .intro {
 }
 .valor-card {
   flex: 1 1 250px;
-  min-width: 220px;
-  max-width: 350px;
+  max-width: 296px;
+  height: 209px;
   text-align: center;
-  padding: 25px 18px 18px 18px;
   background: transparent;
-  border-radius: 18px;
-  box-shadow: 0 4px 18px rgba(210, 210, 210, 0.15);
+  
 }
 .valor-icon {
   display: block;
@@ -925,13 +982,18 @@ section.valores .intro {
   margin: 0 auto 14px auto;
 }
 .valor-title {
-  font-size: 1.38rem;
-  font-weight: 500;
-  margin-bottom: 14px;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  color: black;
+  font-family: "Source Sans 3", sans-serif;
 }
+
 .valor-desc {
-  font-size: 1rem;
-  color: #444;
+  font-size: 18px;
+  color: black;
+  font-family: "Source Sans 3", sans-serif;
   line-height: 1.45;
 }
 
@@ -958,27 +1020,6 @@ section.valores .intro {
 }
 .carousel-btn.prev { left: 8px;}
 .carousel-btn.next { right: 8px;}
-
-.testimonial-dots {
-  text-align: center;
-  margin-top: 16px;
-}
-
-.testimonial-dots span {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  background: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.testimonial-dots span.active {
-  background: #555;
-}
-
 
 /* --- RESPONSIVE --- */
 @media (max-width: 900px) {
@@ -1071,79 +1112,58 @@ section.valores .intro {
 
 
 /* === Testimonios === */
-
+#testimonios{
+  padding-top: 120px;
+}
 .testimonios-section {
-  padding: 5rem 2rem;
-  background: linear-gradient(135deg, #f9f9f9, #f0f4f8);
+  margin: 90px 144px;
   text-align: center;
-}
-
-.section-title {
-  font-size: 2.2rem;
-  margin-bottom: 3rem;
-  color: #1e2a38;
-  font-weight: 700;
-  position: relative;
-  display: inline-block;
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 60%;
-  height: 3px;
-  background: #c5a46d;
-  margin: 0.5rem auto 0;
-  border-radius: 2px;
+  height: 754px;
 }
 
 /* Testimonial Container */
-.testimonios-section {
-  padding: 90px 0;
-  background: #f4f4f4;
-}
+
 
 .testimonios-header {
   text-align: left;
   max-width: 1100px;
-  margin: 0 auto 40px auto;
+  margin-bottom: 40px;
 }
 
 .clientes-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin: 0;
+  font-size: 40px;
+  font-family: "Merriweather", serif;
+  font-weight: 500;
   color: #222;
 }
 
 .clientes-subtitle {
-  font-size: 2.2rem;
+  font-size: 36px;
   color: #868686;
-  margin-top: 0.4rem;
+  font-weight: 400;
   font-style: italic;
+  width: 248px;
+
 }
 
-.clientes-subtitle .italic {
-  font-family: 'Georgia', serif;
-  font-style: italic;
-  color: #444;
-}
 
 .testimonial-carousel {
   background: #fff;
   border-radius: 26px;
   box-shadow: 0 8px 30px rgba(80,88,103,0.14);
-  padding: 60px 50px;
-  max-width: 1200px;
+  padding: 88px 88px;
+  max-width: 1196px;
   margin: 0 auto;
   position: relative;
-  min-height: 240px;
+  height: 440px;
   display: flex;
   align-items: center;
 }
 
 .testimonial-slide {
   width: 100%;
+  width: 720px;
+  height: 155px;
   margin: 0 auto;
   display: none;
   background: none;
@@ -1159,17 +1179,16 @@ section.valores .intro {
 
 .testimonial-text {
   color: #6d6d6d;
-  font-size: 1.19rem;
-  margin: 0 auto 30px auto;
-  max-width: 680px;
+  font-size: 20px;
+  width: 720px;
   text-align: center;
 }
 
 .testimonial-author {
   color: #282828;
-  font-size: 1.1rem;
+  font-size: 18px;
   margin-top: 20px;
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -1290,100 +1309,177 @@ section.valores .intro {
 /* PASOS */
 
 
-#pasos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 7rem 2rem;
+/* Contenedor general */
+.seccion-pasos {
+  padding: 130px 144px;
+  color: #111;
+  background-color: rgb(241, 241, 241);
+}
+
+/* Grid: izquierda (texto) / derecha (lista) */
+.contenedor-pasos {
   max-width: 1100px;
   margin: 0 auto;
-  font-family: 'Georgia', serif;
-  color: #111;
+  display: grid;
+  grid-template-columns: 1fr 460px; /* ajusta el ancho derecho si lo deseas */
+  gap: 60px;
+  align-items: start;
 }
 
-.texto-intro {
-  flex: 1 1 350px;
-  max-width: 45%;
-  margin-bottom: 2rem;
+/* Texto izquierdo */
+.texto-pasos{
+  line-height: 1.3;
+}
+.texto-pasos h2 {
+  font-size: 40px;       /* grande como en la imagen */
+  font-family: "Merriweather", serif; 
+  line-height: 1.3;
+  font-weight: 500;
 }
 
-.texto-intro h2 {
-  font-weight: 400;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+.texto-pasos p {
+  margin-top: 8px;
+  color: black;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 18px;
+  max-width: 357px;
 }
 
-.texto-intro p {
-  font-weight: 300;
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 2rem;
+/* Lista de pasos (derecha) */
+.lista-pasos {
+  width: 100%;
+  width: 320px;
+  height: 270px;
+
 }
 
-.btn-asesoria {
-  font-weight: 600;
-  font-size: 0.9rem;
-  background: none;
-  border: 1.8px solid #888;
-  padding: 0.8rem 2rem;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 5rem;
-  transition: all 0.3s ease;
-  justify-content: center;
-  color: #494848;
+/* Cada detalle (item) */
+.lista-pasos .paso {
+  padding: 10px 0;
+  
 }
 
-.btn-asesoria:hover {
-  background: #444;
-  color: white;
-  border-color: #444;
+
+/* agregar línea entre items excepto el último */
+.lista-pasos .paso:not(:last-child) {
+  border-bottom: 1px solid #e6e6e6;
 }
 
-.pasos-lista {
-  flex: 1 1 350px;
-  max-width: 45%;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.pasos-lista details {
-  border-bottom: 1px solid #ccc;
-  padding: 0.6rem 0;
-  cursor: pointer;
-  font-family: 'Helvetica', sans-serif;
-}
-
-.pasos-lista summary {
+/* summary estilo — texto a la izquierda y flecha a la derecha */
+.lista-pasos summary {
   list-style: none;
+  cursor: pointer;
+  display: block;
+  color: black;
+   font-family: "Source Sans 3", sans-serif;
+  padding-right: 34px;         /* espacio para la flecha */
+  font-weight: 500;
+  font-size: 22px;
+  position: relative;
   outline: none;
+
 }
 
-.pasos-lista summary::-webkit-details-marker {
+/* quitar marcador por defecto en webkit */
+.lista-pasos summary::-webkit-details-marker {
   display: none;
 }
 
-.pasos-lista summary::after {
-  content: "▼";
-  float: right;
-  font-weight: normal;
-  transition: transform 0.3s ease;
+/* flecha con pseudo-elemento (a la derecha) */
+.lista-pasos summary::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #111;
+  border-bottom: 2px solid #111;
+  transform: translateY(-50%) rotate(45deg); /* forma de chevron */
+  transform-origin: center;
+  transition: transform 0.22s ease;
 }
 
-.pasos-lista details[open] summary::after {
-  transform: rotateX(180deg);
+/* cuando el detalle está abierto, girar la flecha */
+.lista-pasos details[open] > summary::after {
+  transform: translateY(-50%) rotate(-135deg);
 }
 
-.pasos-lista p {
-  font-weight: 400;
-  font-size: 0.9rem;
-  margin: 0.8rem 0 1.2rem 0;
-  color: #333;
+/* estilo del texto del contenido que aparece al abrir */
+.lista-pasos p {
+  margin: 8px 0 0 0;
+  color: black;
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+/* Botón centrado abajo del bloque (centro respecto al contenedor max-width) */
+.boton-centro {
+  max-width: 1100px;
+  margin: 28px auto 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Botón con borde, corners suaves y texto en mayúsculas (como en la imagen) */
+.btn-asesoria {
+  background: transparent;
+  border: 1px solid #000000;
+  margin-top: 60px;
+  padding: 20px 32px;
+  width: 267px;
+  height: 56px;
+  border-radius: 8px;
+  font-family: roboto;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+/* hover */
+.btn-asesoria:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* Focus accesible */
+.lista-pasos summary:focus,
+.btn-asesoria:focus {
+  outline: 3px solid rgba(17,17,17,0.12);
+  outline-offset: 3px;
+}
+
+/* Responsive (móvil) — apila y centra */
+@media (max-width: 800px) {
+  .contenedor-pasos {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .lista-pasos {
+    margin-top: 6px;
+  }
+
+  .lista-pasos summary {
+    padding-right: 28px;
+    text-align: left;
+  }
+
+  .texto-pasos h2 {
+    font-size: 28px;
+  }
+
+  .boton-centro {
+    padding: 0 16px;
+  }
 }
 
 /* CONTACTO */
 #contacto {
-  padding: 80px 20px;
+  padding: 96px 144px;
   background: #f9f9f9;
 }
 
@@ -1398,7 +1494,7 @@ section.valores .intro {
 
 .contacto-texto {
   flex: 1;
-  max-width: 479px;
+  max-width: 465px;
   max-height: 579px;
 }
 
@@ -1406,6 +1502,9 @@ section.valores .intro {
   font-size: 40px;
   font-weight: bold;
   color: #111;
+  font-family: "Merriweather", serif;
+  line-height: 1;
+  font-weight: 500;
   max-width: 439px;
   max-height: 129px;
   margin-bottom: 10px;
@@ -1419,9 +1518,11 @@ section.valores .intro {
 }
 
 .contacto-texto p {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.6;
+  font-size: 18px;
+  color: black;
+   font-family: "Source Sans 3", sans-serif;
+  line-height: 1.4;
+  width: 339px;
 }
 
 .contact-form {
@@ -1433,6 +1534,7 @@ section.valores .intro {
 
 .form-group.full {
   grid-column: span 2;
+  
 }
 
 input, textarea {
@@ -1455,7 +1557,7 @@ textarea {
 
 .btn-form {
   width: 100%;
-  padding: 15px;
+  padding: 20px 32px;
   background: #eaeaea;
   color: #333;
   font-size: 16px;
