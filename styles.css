@@ -1818,18 +1818,51 @@ textarea {
   }
 
 }
-@media (min-width: 1440px) {
-  #inicio,
-  #servicios,
+@media (min-width: 1600px) {
+  /* Centramos todas las secciones que tienen márgenes fijos */
+  .servicios-section,
   .cta-final,
   #nosotros,
+  #inicio,
+  .footer-grid,
+  .testimonios-section,
   #valores,
-  #pasos,
-  #testimonios,
-  #contacto,
-  #footer{
-    width: 1296px;;   /* límite del contenido */
-    margin-left: auto;   /* centra horizontalmente */
-    margin-right: auto;
+  #contacto {
+    /* Quitamos margenes fijos para centrar */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: auto;
+    /* Mantenemos max-width para que no crezca más de 1440px */
+    max-width: 1440px;
+  }
+
+  /* Navbar: fondo ancho completo, contenido se centra igual que las secciones */
+  header {
+    width: 100vw;
+    left: 0;
+    right: 0;
+    background: #E4E4E4;
+  }
+
+  nav {
+    max-width: 1440;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+  }
+  .logo img {
+    margin-left: 144px !important; /* Mantener márgenes en logo */
+  }
+  .cta-final{
+    width: 1440px;
+  
+
+  }
+
+  .nav-links {
+    margin-right: 144px !important; /* Mantener márgenes en nav-links */
   }
 }
+
+
+
