@@ -1822,8 +1822,6 @@ textarea {
   /* Centramos todas las secciones que tienen márgenes fijos */
   .servicios-section,
   .cta-final,
-  #nosotros,
-  #inicio,
   .footer-grid,
   .testimonios-section,
   #valores,
@@ -1831,11 +1829,37 @@ textarea {
     /* Quitamos margenes fijos para centrar */
     margin-left: auto !important;
     margin-right: auto !important;
-    padding: auto;
-    /* Mantenemos max-width para que no crezca más de 1440px */
-    max-width: 1440px;
+    width: 100%;
+  
   }
 
+  #inicio{
+  margin: 0;
+  padding: 0;
+  }
+
+  .hero-content{
+   max-width: 1440px;
+   margin: 0;
+   margin-left: calc((100vw - 1440px) / 2);
+    margin-right: calc((100vw - 1440px) / 2);
+    
+  }
+  .nosotros-content{
+    margin: 0 auto;
+  }
+  .testimonios-header{
+    margin: 0;
+    margin-left: calc((100vw - 1440px) / 2);
+    margin-right: calc((100vw - 1440px) / 2);
+    margin-bottom: 20px ;
+    
+  }
+  
+
+
+
+  
   /* Navbar: fondo ancho completo, contenido se centra igual que las secciones */
   header {
     width: 100vw;
