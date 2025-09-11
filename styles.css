@@ -1564,11 +1564,11 @@ section.valores .intro {
   }
 
   .clientes-title {
-    font-size: 20px;
+    font-size: 28px;
   }
 
   .clientes-subtitle {
-    font-size: 16px;
+    font-size: 28px;
     margin: 0 auto;
   }
 
@@ -1680,6 +1680,7 @@ section.valores .intro {
   font-family: "Merriweather", serif; 
   line-height: 1.3;
   font-weight: 500;
+  width: 376px;
 }
 
 .texto-pasos p {
@@ -1687,7 +1688,8 @@ section.valores .intro {
   color: black;
   font-family: "Source Sans 3", sans-serif;
   font-size: 18px;
-  max-width: 357px;
+  width: 376px;
+  
 }
 
 /* Lista de pasos (derecha) */
@@ -1816,11 +1818,64 @@ section.valores .intro {
   .texto-pasos h2 {
     font-size: 28px;
   }
+  .texto-pasos p{
+    max-width: 357px;
+  }
 
   .boton-centro {
     padding: 0 16px;
   }
 }
+
+/* === Responsive 480px === */
+@media (max-width: 480px) {
+  .seccion-pasos {
+    padding: 88px 16px; /* menos padding para móvil */
+  }
+
+  .contenedor-pasos {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: left;  /* mejor alineado en móvil */
+  }
+
+  .texto-pasos h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: left;
+    width: 335px;
+  }
+
+  .texto-pasos p {
+    font-size: 18px;
+    width: 357px;
+    line-height: 1.4;
+  }
+
+  .lista-pasos {
+    width: 100%;
+  }
+
+  .lista-pasos summary {
+    font-size: 22px;
+    padding-right: 24px;
+  }
+
+  .lista-pasos p {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+
+  .btn-asesoria {
+    width: 100%;   /* botón ancho completo en móvil */
+    max-width: 320px;
+    margin-top: 64px;
+    font-size: 15px;
+    color: #616162;
+    padding: 16px;
+  }
+}
+
 
 /* CONTACTO */
 #contacto {
@@ -1939,6 +1994,74 @@ textarea {
     grid-column: span 1;
   }
 }
+/* Responsive para 480px */
+@media (max-width: 480px) {
+  #contacto {
+    padding: 88px 16px;
+  }
+
+  .contacto-texto h2 {
+    font-size: 30px;
+    text-align: left;
+    width: 358px;
+    line-height: 1.05;
+    height: 69px;
+  }
+
+  .contacto-texto h3 {
+    font-size: 29px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .contacto-texto p {
+    font-size: 18px;
+    width: 339px;
+    margin-bottom: auto;
+    text-align: left;
+  }
+
+  .contact-form {
+    grid-template-columns: repeat(2, 1fr); /* conservar 2 columnas para filas 2-2 */
+    gap: 10px;
+  }
+
+  /* forzar el span full para inputs que deben ocupar toda la fila */
+  .form-group.full {
+    grid-column: 1 / -1;
+  }
+
+  /* botón y acciones ocupan toda la fila y se estiran */
+  .form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .btn-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px 18px;
+    font-size: 14px;
+    height: 48px;
+    border-radius: 8px;
+  }
+
+  input, textarea {
+    padding: 12px 14px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+
+  .nota {
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
+  }
+}
+
 
 
 
@@ -2145,29 +2268,174 @@ textarea {
 }
 
 @media (max-width: 480px) {
+  /* contenedor: una columna vertical y alineado a la izquierda */
   .footer {
-    padding: 2rem 1rem 1rem 1rem; /* menos padding lateral */
+    padding: 56px 16px;
   }
 
+  /* fuerza columna única y control de orden mediante flex */
   .footer-grid {
-    gap: 1.5rem;
-  }
-  .footer-col p{
-    font-size: 0.95rem;
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px;
+    width: auto;
+    height: 542px;
+    text-align: left;
+    margin: 0;
   }
 
+  /* Aseguramos el orden visual exacto (usa order) */
+  /* 1) Logo arriba */
+  .footer-logo {
+    order: 1;
+    align-self: flex-start;
+    width: 128px;
+    height: 105px;
+  }
+  .footer-logo img {
+    display: block;
+    max-width: 120px;
+    margin: 0 0 8px 0;
+  }
+
+  /* 2) Navbar (links) debajo del logo en dos columnas compactas */
+  .footer-links-grid {
+    order: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: auto;
+    align-items: start;
+    width: 226px;
+    height: 82px;
+    margin-bottom:20px ;
+  }
+  .footer-links-grid li { margin: 0 0 6px 0; list-style: none; }
   .footer-links-grid a {
-    font-size: 0.88rem; /* texto más compacto */
+    font-size: 16px;
+    color: #2c3e50;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  /* 3) Teléfono / correo / horario (columna 2) */
+  .footer-col2 {
+    order: 3;
+    margin: 0;
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 1.45;
+    text-align: left;
+    display: block;
+    gap: 6px;
+  }
+  .strong{
+    font-size: 14px;
+  }
+  .atencion{ font-size: 14px;}
+  .footer-col2 a { color: #2c3e50; text-decoration: none; display: inline-block;font-size: 14px; }
+  .footer-col2 a:hover { text-decoration: underline; }
+
+  /* 4) Texto principal (titular + subtítulo) */
+  /* Si tu titular usa otra clase, mantiene .footer-text / .footer-subtext */
+  .footer-col3{
+    width: 343px;
+    margin-top: 24px;
+  }
+  .footer-text {
+    order: 4;
+    font-weight: bold;
+    font-size: 18px;
   }
 
   .footer-subtext {
-    font-size: 0.88rem;
-  }
-  .footer-bottom p{
-    font-size: 0.7rem;
+    order: 5;
+    font-size: 14px;
+    color: #333;
+    font-weight: 0;
+
   }
 
+  /* 5) Redes sociales (síguenos) debajo del texto, alineadas a la izquierda */
+  .footer-social {
+    order: 6;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 24px;
+  }
+  .footer-social span{
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .social-circle {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background: #b0b0b0;
+    flex: 0 0 28px;
+  }
+  .social-circle:hover { background: #0066cc; }
+
+  /* 6) Línea del footer: la dibujamos con ::before dentro de .footer-bottom,
+         pero la colocamos antes del copy visualmente (usamos order para bloquear) */
+  .footer-bottom {
+    order: 7;
+    position: relative;
+    padding-top: 14px;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 6px;
+    font-size: 14px;
+    height: 151px;
+    width: 100%;
+  }
+
+  .footer-bottom::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    top: 0;
+    border-top: 1px solid #a0a0a0;
+  }
+
+  /* 7) Copy + links (políticas, términos, desarrollado) debajo de la línea */
+  .footer-bottom p {
+    order: 8; /* el texto dentro del footer-bottom ya aparece tras la línea */
+    padding: 8px 12px 0;
+    margin: 0;
+    font-size: 0.75rem;
+    color: #444;
+  }
+
+  .footer-bottom-links {
+    order: 9;
+    padding: 6px 12px 12px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .footer-bottom-links a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 0.82rem;
+  }
+  .footer-bottom-links a:hover { color: #0066cc; }
+
+  /* ajustes finos */
+  .footer-links-grid a, .footer-subtext, .footer-col2 { line-height: 1.35; }
+
+  /* si hay alguna columna extra (.footer-col3) que se muestre como bloque debajo (por seguridad) */
+  .footer-col3 { order: 10; width: 100%; }
+
 }
+
 @media (min-width: 1600px) {
   /* Centramos todas las secciones que tienen márgenes fijos */
   .servicios-section,

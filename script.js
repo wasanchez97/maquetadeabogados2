@@ -223,3 +223,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// Pasos despliegue una x una 
+  document.addEventListener("DOMContentLoaded", () => {
+    const detalles = document.querySelectorAll(".lista-pasos details");
+
+    detalles.forEach((det) => {
+      det.addEventListener("toggle", () => {
+        if (det.open) {
+          // Cierra todos los demás cuando uno se abre
+          detalles.forEach((other) => {
+            if (other !== det) {
+              other.removeAttribute("open");
+            }
+          });
+        }
+      });
+    });
+  });
+
+
+
