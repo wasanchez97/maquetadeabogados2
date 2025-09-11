@@ -805,6 +805,7 @@ nav {
   .tab-img{
     min-width: 358px;
     min-height: 272px;
+    margin-left: 0;
   }
 
   .tab-text {
