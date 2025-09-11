@@ -719,6 +719,8 @@ nav {
     margin: 0 auto;
     padding-top: 72px;
     padding-bottom: 72px; 
+    padding-left: 0;
+    padding-right: 0;
     width: 100%;
     max-width: 100%;
 
@@ -796,14 +798,13 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 45px;
-    width: 100%;
+    width: 358px;
     height: auto;
     text-align: left;
   }
   .tab-img{
     min-width: 358px;
     min-height: 272px;
-    padding-right:16px ;
   }
 
   .tab-text {
