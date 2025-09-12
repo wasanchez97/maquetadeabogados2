@@ -212,7 +212,7 @@ nav {
 /* Hero */
 .hero {
   height: 765px;
-  background:url('./img/floriane-vita-FyD3OWBuXnY-unsplash.jpg') center/cover no-repeat;
+  background:url('./img/hero1.jpg') center/cover no-repeat;
   position: relative;
   padding: 168px 144px;
   display: flex;
@@ -226,7 +226,7 @@ nav {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(112, 84, 46, 0.85);
+  background-color: #24406C;
   mix-blend-mode: hard-light;
 }
 .hero-content {
