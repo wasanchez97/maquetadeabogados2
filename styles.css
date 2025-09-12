@@ -48,16 +48,16 @@ header {
 }
 
 nav {
-  width: 100%;
-  margin: auto 144px;  /* centrar en desktop */
-  height: 104px;    /* fija altura para navbar */
+  max-width: 1440px;      /* ancho máximo de tu navbar */
+  margin: 0 auto;         /* lo centra */
+  padding: 0 144px;       /* espacio simétrico a izquierda y derecha */
+  height: 104px;
   display: flex;
-  justify-content: space-between; /* separa logo y menú/hamburguesa */
+  justify-content: space-between; 
   align-items: center;
-  background: #EFEDE7;  /* por ejemplo, fondo blanco */
+  background: #EFEDE7;
   box-sizing: border-box;
 }
-
 
 .logo{
   max-width: 129px;
@@ -75,7 +75,7 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 6rem;           /* separación entre links */
+  gap: 3.5rem;           /* separación entre links */
   align-items: center;
   justify-content: center;
 }
@@ -104,7 +104,6 @@ nav {
   font-size: 16px;
   font-weight: 400;
   color: white;
-  font-size: 0.9rem;
   cursor: pointer;
   transition: background 0.3s ease;
 }
