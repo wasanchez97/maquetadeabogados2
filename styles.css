@@ -539,6 +539,7 @@ nav {
   align-items: center;
   column-gap: 1.2rem;
   row-gap: 2rem;
+  margin: 0 auto;
 }
 
 .cta-text{
