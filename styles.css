@@ -263,8 +263,8 @@ nav {
   display: flex;
   align-items: center;
   padding: 20px 32px;
-  background: #24406C;
-  color: #E5E5E5;
+  background: #f4f1e5;
+  color: #24406C;
   border-radius: 12px;
   font-family: Roboto;
   font-size: 16px;
@@ -282,8 +282,8 @@ nav {
 
 
 .btn-cta:hover {
-  background: #423E7D;
-  color: #DEA95A;
+  background:#6288C5;
+  color: #f4f1e5;
   transform: scale(1.05);
 }
 
@@ -450,8 +450,8 @@ nav {
 
 
 .tab-btn:hover {
-  background: #423E7D;
-  color: #DEA95A;
+  background: #24406C;
+  color: #fff;
 }
 
 /* --- Contenido Tabs --- */
