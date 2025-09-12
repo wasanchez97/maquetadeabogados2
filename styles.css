@@ -73,6 +73,7 @@ nav {
   gap: 6rem;           /* separación entre links */
   align-items: center;
   margin-right:144px;
+  margin: 0 auto;
   
 }
 
