@@ -49,7 +49,6 @@ header {
 
 nav {
   width: 100%;
-  padding: 0 48px;  /* padding lateral para separación */
   margin: 0 auto;   /* centrar en desktop */
   height: 104px;    /* fija altura para navbar */
   display: flex;
@@ -58,13 +57,20 @@ nav {
   background: #EFEDE7;  /* por ejemplo, fondo blanco */
   box-sizing: border-box;
 }
+.container{ 
+  margin: 0 144px;
+}
+.logo{
+  max-width: 129px;
+  max-height: 96px;
+}
 
 .logo img {
-  height: 64px;        /* logo no tan alto para navbar */
-  max-width: 96px;
+  height: 69px;        /* logo no tan alto para navbar */
+  max-width: 129px;
   padding: 0;
+  margin: 0;
   cursor: pointer;
-  margin-left: 144px;
 }
 
 .nav-links {
@@ -72,7 +78,6 @@ nav {
   display: flex;
   gap: 6rem;           /* separación entre links */
   align-items: center;
-  margin-right:144px;
   margin: 0 auto;
   
 }
