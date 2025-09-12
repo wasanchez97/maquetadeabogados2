@@ -59,7 +59,11 @@ nav {
 }
 .container{ 
   margin: 0 144px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
 }
+
 .logo{
   max-width: 129px;
   max-height: 96px;
@@ -77,9 +81,7 @@ nav {
   list-style: none;
   display: flex;
   gap: 6rem;           /* separación entre links */
-  align-items: center;
-  margin: 0 auto;
-  
+  align-items: center;  
 }
 
 .nav-links a {
