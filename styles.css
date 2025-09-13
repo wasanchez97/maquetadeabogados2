@@ -477,7 +477,7 @@ nav {
   }
   .hero-content {
     margin: 0;
-    padding: 40px 16px;
+    padding: 40px auto;
     text-align: left;
   }
 
