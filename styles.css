@@ -43,6 +43,126 @@ img, video {
 header {
   position: fixed;
   width: 100%;
+  background: #EFEDE7; 
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1440px;      /* ancho máximo de tu navbar */
+  margin: 0 auto;         /* lo centra */
+  padding: 0 144px;       /* espacio simétrico a izquierda y derecha */
+  height: 104px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo{
+  max-width: 129px;
+  max-height: 96px;
+}
+
+.logo img {
+  height: 69px;        /* logo no tan alto para navbar */
+  max-width: 129px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 3.5rem;           /* separación entre links */
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.nav-links a {
+  color: #24406C;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #DEA95A;
+}
+
+
+
+/* Botón contacto (preservar tamaño y estilo) */
+.btn-contacto {
+  display: flex;
+  align-items: center;
+  background: #24406C;
+  border: 1PX solid;
+  padding: 16px 32px; 
+  border-radius: 12px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-contacto:hover {
+  background: #1E3456;
+  color: #FFFFFF;
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 1024px) {
+  nav {
+    padding: 0 24px; /* menos padding lateral en tablets */
+  }
+
+  .nav-links {
+    gap: 2rem;
+    margin-right: 0;  /* remover margen derecho para no cortarlo */
+  }
+
+  .logo img {
+    margin-left: 0;  /* quitar margen para que el logo quede alineado */
+  }
+}
+
+/* --- Navbar --- */
+header {
+  position: fixed;
+  width: 100%;
   background: #E4E4E4; /* gris claro como la imagen */
   z-index: 1000;
 }
@@ -98,8 +218,8 @@ nav {
   align-items: center;
   background: #24406C;
   border: 1PX solid;
-  padding: 20px 30px; 
-  border-radius: 5px;
+  padding: 16px 32px; 
+  border-radius: 12px;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
@@ -109,8 +229,8 @@ nav {
 }
 
 .btn-contacto:hover {
-  background: #423E7D;
-  color: #DEA95A;
+  background: #1E3456;
+  color: #FFFFFF;
 }
 
 /* Botón hamburguesa */
@@ -175,16 +295,13 @@ nav {
   /* Ocultar nav-links */
   .nav-links {
     position: fixed;       /* para overlay */
-    top: 70px;
     left: 0;
+    top: 70px;
     width: 100vw;
-    height: calc(100vh - 70px);
-    background: #e5e5e5;
+    height: 480px;
+    background: #EFEDE7;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    padding-top: 2rem;
-
     display: none;         /* oculto inicialmente */
     overflow-y: auto;
     z-index: 1000;
@@ -198,15 +315,22 @@ nav {
 
   .nav-links li {
     width: 100%;
+    margin-top: 10px;
     text-align: center;
   }
 
   /* Botones/links ocupan todo ancho */
   .nav-links li a,
-  .nav-links li a button {
+  .nav-links li a{
     width: 100%;
-    padding: 1rem 0;
+    text-align: left;
+    margin-left: 20px;
     display: inline-block;
+    font-size: 20px;
+  }
+  .btn-contacto{
+    width:159px;
+    margin: 0 auto;
   }
 }
 
@@ -357,14 +481,16 @@ nav {
     text-align: left;
   }
 
-  .btn-cta {
-    display: flex;
+   .btn-cta {
     width: 343px;
     height: 72px;
-    font-size: 16;
-    border-radius: 1.8rem;
+    font-size: 16px;
+    background-color: #f4f1e5;
+    color: #24406C;   /* asegúrate de forzar aquí el color del texto */
+    line-height: normal; /* quita el 1000 */
   }
-  .btn-cta span{
+
+  .btn-cta span {
     margin: 0 auto;
     width: 203px;
     height: 19px;
@@ -444,10 +570,9 @@ nav {
   font-size: 18px;
   font-weight: 500;
   transition: background 0.3s ease, color 0.3s ease;
-  width: 213px;
+  width: 270px;
   height: 46px;
 }
-
 
 
 .tab-btn:hover {
@@ -578,6 +703,10 @@ nav {
   font-size: 16px;
   text-decoration: none;
   display: inline-block;
+}
+.cta-button a:hover{
+  background-color: #C0924E;
+  color: #F4F1E5;
 }
 .cta-phone{
   line-height: 0.3;
@@ -847,6 +976,7 @@ nav {
     width: 358px;
     height: 439px;
     border-radius: 1.2rem;
+    margin-bottom: 72px;
   }
 
   .cta-content {
@@ -1248,7 +1378,7 @@ section.valores .intro {
     max-width: 100%;
     height: auto;
     margin: 88px 16px;
-    padding: 0 0 0 0;
+    padding: 80px 0 0 0;
   }
 
   .valor-container {
@@ -1350,7 +1480,7 @@ section.valores .intro {
 
 /* === Testimonios === */
 #testimonios {
-  background-color:#EAF6ED ;
+  background-color:#EFEDE7; ;
   margin: 0;
 }
 
@@ -1667,7 +1797,7 @@ section.valores .intro {
 .seccion-pasos {
   padding: 130px 144px;
   color: #24406C;
-  background-color: rgb(241, 241, 241);
+  background-color: white;
 }
 
 /* Grid: izquierda (texto) / derecha (lista) */
@@ -1785,7 +1915,7 @@ section.valores .intro {
   width: 267px;
   color: white;
   height: 56px;
-  border-radius: 32px;
+  border-radius: 12px;
   font-family: roboto;
   font-size: 16px;
   text-transform: uppercase;
@@ -1795,8 +1925,8 @@ section.valores .intro {
 
 /* hover */
 .btn-asesoria:hover {
-  background: #423E7D;
-  color: #DEA95A;
+  background: #1E3456;
+  color: #fff;
   
 }
 
@@ -1880,7 +2010,6 @@ section.valores .intro {
     max-width: 320px;
     margin-top: 64px;
     font-size: 15px;
-    color: #616162;
     padding: 16px;
   }
 }
@@ -1939,6 +2068,7 @@ section.valores .intro {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
+  max-height:562px;
 }
 
 .form-group.full {
@@ -1950,10 +2080,15 @@ input, textarea {
   width: 100%;
   padding: 12px 15px;
   border: none;
-  background: #efefef;
+  background: white;
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 16px;
+  height: 56px;
+  max-width: 562px;
   outline: none;
+}
+#mensaje{
+  height: 226px;
 }
 
 textarea {
@@ -2492,13 +2627,8 @@ textarea {
     right: 0;
     background: #E4E4E4;
   }
-
-  nav {
-    max-width: 1440;
-    margin-left: auto !important;
-    margin-right: auto !important;
-
-  }
+  
+  
   .logo img {
     margin-left: 144px !important; /* Mantener márgenes en logo */
   }
@@ -2508,10 +2638,34 @@ textarea {
 
   }
 
+
   .nav-links {
-    margin-right: 144px !important; /* Mantener márgenes en nav-links */
+    margin-right: 0px !important; /* Mantener márgenes en nav-links */
   }
 }
+
+@media (min-width: 1441px) {
+  header {
+    width: 100%;
+    left: 0;
+    right: 0;
+    background: #EFEDE7;
+  }
+
+  /* El padding aumenta a medida que la pantalla es mayor a 1440 */
+  nav {
+    max-width: 100%;
+    margin: 0;
+    padding-left: calc((100vw - 1440px) / 2 + 144px);
+    padding-right: calc((100vw - 1440px) / 2 + 144px);
+    box-sizing: border-box;
+  }
+
+  /* quitar márgenes extra que dupliquen el espacio */
+  .logo img { margin-left: 0 !important; }
+  .nav-links { margin-right: 0 !important; }
+}
+
 
 
 
