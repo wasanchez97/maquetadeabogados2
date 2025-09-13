@@ -2207,6 +2207,47 @@ textarea {
   }
 }
 
+/* CSS */
+.btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  background-color: #25D366; /* verde WhatsApp */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  z-index: 2000;
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.1);
+  background-color: #1ebe5d;
+}
+
+.icon-whatsapp {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 480px) {
+  .btn-whatsapp {
+    bottom: 15px;
+    right: 15px;
+    width: 64px;
+    height: 64px;
+  }
+  .icon-whatsapp {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
 
 
 
