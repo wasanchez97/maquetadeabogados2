@@ -329,11 +329,10 @@
   <div class="contacto-content reveal">
     <!-- Texto a la izquierda -->
     <div class="contacto-texto">
-      <h2>Tu asesoría legal empieza aquí,</h2>
-      <h3><em>hablemos hoy mismo.</em></h3>
+      <h2>La seguridad legal de tu inversión comienza aquí, consulta hoy.</h2>
+      <br>
       <p>
-        Comparte los detalles de tu situación legal.  
-        Te brindaremos un análisis claro y soluciones prácticas para asegurar tu inversión inmobiliaria.
+        Cuéntanos tu caso y revisaremos juntos cada detalle para darte claridad, seguridad y la mejor estrategia legal para proteger tu inversión
       </p>
     </div>
 
@@ -353,9 +352,23 @@
       <div class="form-group">
         <input type="email" id="email" placeholder="Email" required />
       </div>
-      <div class="form-group">
-        <input type="text" id="servicio" placeholder="Tipo de Servicio" />
-      </div>
+  <div class="form-group">
+  <input type="text" id="servicio" placeholder="Tipo de Servicio" readonly required />
+</div>
+
+<!-- Modal de servicios -->
+<div id="servicio-modal" class="modal">
+  <div class="modal-content">
+    <h3>Seleccione un servicio</h3>
+    <ul class="servicios-lista">
+      <li data-value="asesoria-legal">Título y Contratos</li>
+      <li data-value="constitucion-empresas">Gestión Notarial</li>
+      <li data-value="contratos">Junta de Propietarios</li>
+      <li data-value="propiedad-inmobiliaria">Asesoría Legal Inmobiliaria</li>
+      <li data-value="litigios">Proyectos Inmobiliarios</li>
+    </ul>
+  </div>
+</div>
 
       <div class="form-group full">
         <textarea id="mensaje" rows="5" placeholder="Describe tu caso"></textarea>
@@ -368,6 +381,7 @@
     </form>
   </div>
 </section>
+
 
 <!-- En tu HTML, al final del body -->
 <a href="https://wa.me/51999999999?text=Hola%20quiero%20más%20información"
