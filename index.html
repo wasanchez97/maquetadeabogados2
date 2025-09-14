@@ -16,11 +16,12 @@
 <body>
 
   <!-- Navbar -->
+<!-- Navbar -->
 <header id="navbar">
   <nav class="container">
     <!-- Logo -->
     <div class="logo">
-      <img src="img/Logo.svg" alt="Logo Alarco">
+      <a href="#inicio"><img src="img/Logo.svg" alt="Logo Alarco"></a>
     </div>
 
     <!-- Botón hamburguesa -->
@@ -32,23 +33,23 @@
 
     <!-- Menú de navegación -->
     <ul class="nav-links" id="nav-links">
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#valores">Valores</a></li>
-      <li><a href="#testimonios">Testimonios</a></li>
-      <li><a href="#pasos">Pasos</a></li>
-      <li><a href="#contacto"><button class="btn-contacto">CONTACTO</button></a></li>
+      <li class="link"><a href="#servicios">Servicios</a></li>
+      <li class="link"><a href="#nosotros">Nosotros</a></li>
+      <li class="link"><a href="#valores">Valores</a></li>
+      <li class="link"><a href="#pasos">Pasos</a></li>
+      <li class="link"><a href="#testimonios">Testimonios</a></li>
+      <li class="btn-link"><a href="#contacto"><button class="btn-contacto">CONTACTO</button></a></li>
+        <div class="extra-contacto">
+    <p><a href="mailto:correo@tudominio.com">correo@tudominio.com</a></p>
+    <p><a href="tel:+51987654321">+51 987 654 321</a></p>
+  </div>
     </ul>
-   
-    
-  
-
   </nav>
-</header> 
+</header>
 
   <!-- Secciones -->
- <section id="inicio" class="hero reveal">
-  <div class="hero-content">
+ <section id="inicio" class="hero">
+  <div class="hero-content reveal">
     <h2 class="hero-title">Seguridad legal y confianza en cada inversión</h2>
     <p class="hero-subtitle">Cada inversión inmobiliaria debe ser segura y confiable respaldada por nuestra visión legal y financiera que protege tu patrimonio. </p>
     <a href="#contacto" class="btn-cta"><span>SOLICITAR UNA ASESORÍA</span></a>
@@ -60,8 +61,8 @@
 </section>
 
 <!-- SERVICIOS -->
-<section class="servicios-section reveal" id="servicios">
-  <div class="servicios-container">
+<section class="servicios-section" id="servicios">
+  <div class="servicios-container reveal">
     <div class="servicios-header">
     <div class="titulo-servicios">
       <h2>Areas de Práctica</h2>
@@ -166,8 +167,8 @@
 
 
 <!-- SOBRE NOSOTROS -->
-<section id="nosotros" class="section container reveal">
-  <div class="nosotros-content">
+<section id="nosotros" class="section container">
+  <div class="nosotros-content reveal">
     <div class="nosotros-img">
       <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216" alt="Equipo de abogados">
     </div>
@@ -188,8 +189,8 @@
 
 
 <!-- SOBRE Valores -->
-<section class="valores reveal" id="valores">
-  <div class="valor-container">
+<section class="valores" id="valores">
+  <div class="valor-container reveal">
  <div class="tittle-valores">
   <h2>¿Por qué elegir Estudio Alarco</h2>
   <h3>Para tus casos Inmobiliarios?</h3>
@@ -239,8 +240,8 @@
 </section>
 
 
-<section class="seccion-pasos reveal" id="pasos">
-  <div class="contenedor-pasos">
+<section class="seccion-pasos" id="pasos">
+  <div class="contenedor-pasos reveal">
     <div class="texto-pasos">
       <h2>¿Buscas claridad en cada paso de tu proceso notarial?</h2>
       <p>Te mostramos el proceso para que tomes decisiones con total seguridad.</p>
@@ -274,15 +275,15 @@
     </div>
   </div>
 
-  <div class="boton-centro">
+  <div class="boton-centro reveal">
     <button type="button" class="btn-asesoria">SOLICITA UNA ASESORÍA</button>
   </div>
 </section>
 
 
 
-<section id="testimonios" class="testimonios-section reveal">
-  <div class="testimonios-header">
+<section id="testimonios" class="testimonios-section">
+  <div class="testimonios-header reveal">
     <h2 class="clientes-title">Nuestros Clientes</h2>
     <p class="clientes-subtitle">y su experiencia</p>
   </div>
@@ -324,8 +325,8 @@
 
 
 <!-- CONTACTO -->
-<section id="contacto" class="section reveal">
-  <div class="contacto-content">
+<section id="contacto" class="section">
+  <div class="contacto-content reveal">
     <!-- Texto a la izquierda -->
     <div class="contacto-texto">
       <h2>Tu asesoría legal empieza aquí,</h2>
@@ -379,25 +380,24 @@
   </div>
 </a>
 
-
 <footer class="footer" id="footer">
   <div class="footer-grid">
 
     <!-- Columna 1: Logo + Links -->
     <div class="footer-col footer-col1">
       <div class="footer-logo">
-        <img src="img/Logo.svg" alt="Logo Alarco">
+        <img src="img/Logo-blanc.svg" alt="Logo Alarco">
       </div>
       <div class="footer-links-grid">
         <ul>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Valores</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#valores">Valores</a></li>
         </ul>
         <ul>
-          <li><a href="#">Testimonios</a></li>
-          <li><a href="#">Pasos</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#pasos">Pasos</a></li>
+          <li><a href="#contactos">Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -419,8 +419,8 @@
       <p class="footer-subtext">Especialistas en derecho inmobiliario y corporativo con visión financiera.</p>
       <div class="footer-social">
         <span>Síguenos:</span>
-        <a href="#"><div class="social-circle"></div></a>
-        <a href="#"><div class="social-circle"></div></a>
+        <a href="#"><div class="social-circle"><img src="img/facebook.svg" alt=""></div></a>
+        <a href="#"><div class="social-circle"><img src="img/instagram.svg" alt=""></div></a>
       </div>
     </div>
   </div>
@@ -431,10 +431,16 @@
     <div class="footer-bottom-links">
       <a href="#">Políticas de Privacidad</a>
       <a href="#">Términos de servicio</a>
-      <a href="#">Desarrollado por 3MStudio</a>
+    </div>
+    <div class="footer-bottom-links1">
+      <a href="#">Desarrollado por:</a>
+      <img class="logo-footer" src="img/logo-foo.svg" alt="">
+    </div>
+    </div>
     </div>
   </div>
 </footer>
+
 
 
  
